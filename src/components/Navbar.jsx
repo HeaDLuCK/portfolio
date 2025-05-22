@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../assets/test.png';
+import 'boxicons/css/boxicons.min.css';
 export default function Navbar() {
   return (
     <div className='flex items-center justify-between p-2'>
@@ -15,9 +16,7 @@ export default function Navbar() {
         </nav>
       </div>
       
-      <div className='flex items-center justify-center '>
-        <button className='bg-white text-black p-3 rounded-2xl'>Contact Me</button>
-      </div>
+        <button className='flex items-center gap-2 bg-white text-black py-2 px-4 rounded-xl cursor-pointer'>< i class='bx  bx-phone'  ></i> Contact Me</button>
     </div>
   );
 }

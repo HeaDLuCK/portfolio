@@ -1,0 +1,16 @@
+name:  Bui.ld and push Docker image
+on:
+  [workflow_dispatch]
+jobs:
+  publish_images:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build image
+        run:  docker build . -t ghcr.io/headluck/headluck-portfolio:latest
+      
+      - name: push image 
+        run:  docker push ghcr.io/headluck/headluck-portfolio:latest
+      

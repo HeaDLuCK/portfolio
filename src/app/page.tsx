@@ -1,6 +1,7 @@
+'use client';
 import Image from "next/image";
-import logo from '../assets/zm-logo.png';
 import devoxImg from '../assets/meinDevox.jpg';
+import { Typewriter } from 'react-simple-typewriter';
 export default function Home() {
   return (
     <>
@@ -11,7 +12,19 @@ export default function Home() {
         </div>
 
         <div className="absolute top-0  w-1/2 h-full flex flex-col gap-8 backdrop-blur-xs">
-          <h1 className="ml-5 text-4xl font-bold text-white mt-20">Hey, I'm <span className="text-indigo-400">Zakaria Missou</span></h1>
+          <h1 className="ml-5 text-4xl font-bold text-white mt-20">
+            Hey, I'm
+            <span className="text-indigo-400">
+              <Typewriter
+                words={[' Zakaria Missou', ' FullStack Developer', ' Web Enthusiast']}
+                loop={true}
+                cursor
+                cursorStyle='|'
+                typeSpeed={80}
+                deleteSpeed={40}
+                delaySpeed={2000}
+              /></span>
+          </h1>
           <p className="ml-5 text-lg text-gray-300 ">
             I’m a passionate FullStack Web Developer from Morocco with expertise in modern web technologies.
             I specialize in building responsive, user-friendly web applications that bring ideas to life and create meaningful digital experiences.

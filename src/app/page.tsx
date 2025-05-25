@@ -1,23 +1,89 @@
 import Image from "next/image";
 import logo from '../assets/zm-logo.png';
+import devoxImg from '../assets/meinDevox.jpg';
 export default function Home() {
   return (
     <>
-      <div className="flex py-12">
-          <div className="w-3/5 flex flex-col justify-center items-start gap-4 p-8">
-            <div className="text-xs border-2 p-2  rounded-xl border-[#ffffff29] flex items-center gap-1">< i className='bx  bxs-circle text-green-700 '  ></i> Available for Work</div>
-            <div className="flex flex-col gap-4 ">
-              <h2 className=" text-gray-500  text-7xl font-light ">Transform your ideas into digital success with Me!</h2>
-              <p><small>I'am your partner in product web dev , website creation game creation and branding for every stage of you business</small></p>
+      <div className="mt-8 relative overflow-hidden rounded-3xl shadow-2xl">
+        <div>
+          <Image src={devoxImg} alt="" />
+          <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-indigo-950/70 via-blue-950/70 to-transparent"></div>
+        </div>
+
+        <div className="absolute top-0  w-1/2 h-full flex flex-col gap-8 backdrop-blur-xs">
+          <h1 className="ml-5 text-4xl font-bold text-white mt-20">Hey, I'm <span className="text-indigo-400">Zakaria Missou</span></h1>
+          <p className="ml-5 text-lg text-gray-300 ">
+            I’m a passionate FullStack Web Developer from Morocco with expertise in modern web technologies.
+            I specialize in building responsive, user-friendly web applications that bring ideas to life and create meaningful digital experiences.
+            Constantly eager to learn and innovate, I enjoy exploring new tools and pushing the boundaries of web development.
+          </p>
+        </div>
+        <div>
+          <p className="absolute bottom-5 left-5 text-white text-md bg-black/40 px-4 py-2 rounded-lg shadow">
+            Fueled by Java: the language and the liquid. <span>☕</span>
+          </p>
+        </div>
+      </div>
+
+      <div className="mt-8 flex justify-between items-start">
+        <div className="flex-1 mt-12">
+          <h2 className="text-3xl font-bold ">About Me</h2>
+          <p className=" text-gray-600 mt-4 max-w-2xl mx-auto">
+            I started coding during the COVID era,
+            writing my first Python program and quickly falling in love with development.
+            Since then, I’ve been on a journey exploring different languages and frameworks,
+            always driven by curiosity and a passion for learning. When I’m not coding,
+            you’ll find me gaming or diving into new technologies.
+            <a href="/about"
+              className="inline-block ml-3 text-white hover:underline font-semibold  "
+            >Dive In!</a>
+          </p>
+        </div>
+        <div className="flex-1 ">
+          <div className="m-12 p-4 rounded-xl grid grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] gap-4 border border-[#333]
+           bg-gradient-to-tr md:bg-gradient-to-tr from-indigo-950/40 via-blue-950/40 to-transparent">
+            <div className="flex flex-col gap-2 p-2  h-32 rounded-xl border  border-[#333] bg-white/5  backdrop-blur-md">
+              <h3 className="text-center font-semibold text-md">Frontend Development</h3>
+              <p className="font-medium text-sm text-gray-400 ">Building responsive and interactive user interfaces using modern frameworks and best practices.</p>
             </div>
-            <div className="flex gap-4">
-              <button className="bg-white text-black px-4 py-2 rounded-xl cursor-pointer">Services</button>
-              <button className="bg-black text-white px-4 py-2 rounded-xl border cursor-pointer">Our work</button>
+            <div className="flex flex-col gap-2 p-2  h-32 rounded-xl border  border-[#333] bg-white/5  backdrop-blur-md">
+              <h3 className="text-center font-semibold text-md">Backend Development</h3>
+              <p className="font-medium text-sm text-gray-400">Developing robust server-side applications, APIs, and efficient database solutions.</p>
             </div>
+            <div className="flex flex-col gap-2 p-2  h-32 rounded-xl border  border-[#333] bg-white/5  backdrop-blur-md">
+              <h3 className="text-center font-semibold text-md">Responsive Design</h3>
+              <p className="font-medium text-sm text-gray-400">Ensuring seamless functionality and aesthetics across all devices and screen sizes.</p>
+            </div>
+            <div className="flex flex-col gap-2 p-2  h-32 rounded-xl border  border-[#333] bg-white/5  backdrop-blur-md">
+              <h3 className="text-center font-semibold text-md">Performance Optimization</h3>
+              <p className="font-medium text-sm text-gray-400">Optimizing web applications for speed, scalability, and an enhanced user experience.</p>
+            </div>
+            <button className="col-span-full border border-[#333] 
+              w-fit mx-auto px-4 py-2 rounded-xl bg-white/5  backdrop-blur-md cursor-pointer
+              hover:bg-white/20 transition-all">Donwload CV</button>
           </div>
-          <div>
-              <Image src={logo} alt="Logo" width={500} height={500}  className="rounded-4xl"/>
-          </div>
+        </div>
+      </div>
+      <div className="mt-8 flex justify-between items-start">
+        <div className="flex items-end gap-2">
+          <span className="text-6xl font-bold">12</span>
+          <span className="max-w-[100px] dark:text-white/80  text-black/70">Years of experience</span>
+        </div>
+        <div className="flex items-end gap-2">
+          <span className="text-6xl font-bold">12</span>
+          <span className="max-w-[100px] dark:text-white/80  text-black/70">Projects Completed</span>
+        </div>
+        <div className="flex items-end gap-2">
+          <span className="text-6xl font-bold">12</span>
+          <p className="max-w-[100px] dark:text-white/80  text-black/70">Technical Skills</p>
+        </div>
+      </div>
+      <div className="mt-8   bg-gradient-to-t md:bg-gradient-to-tl   from-indigo-950/20 via-blue-950/50 to-transparent border
+       border-[#333] rounded-3xl p-8 flex flex-col items-center gap-5">
+        <span className=" bg-black/40 rounded-2xl border-[#333] border  p-2 text-xs">Share your thoughts</span>
+        <h2 className="text-3xl font-bold text-indigo-300 tracking-wide">Love to hear from you</h2>
+        <p>Always open to ideas, feedback, or a good conversation—because great things happen when we connect and share.</p>
+        <button className='flex items-center gap-2 bg-white text-black py-2 px-4 rounded-xl cursor-pointer'>Contact Me</button>
       </div>
     </>
   );

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import { ThemeProvider } from 'next-themes';
 import "./globals.css";
 
 const poppins = Poppins({
@@ -17,14 +18,19 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en" className={` ${poppins.variable}`}>
-      <body className="px-6">
-        <Navbar/>
-        <main>
-          {children}
-        </main>
-
+      <body className="max-w-screen-xl mx-auto m-4">
+        <ThemeProvider attribute="class" enableSystem={true}>
+          <Navbar />
+          <main >
+            {children}
+          </main>
+          <footer className="text-center text-gray-500 mt-10">
+            <p>©2025 | Zakaria Missou, All rights reserved.</p>
+          </footer>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -1,22 +1,47 @@
+'use client';
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../assets/test.png';
 import 'boxicons/css/boxicons.min.css';
+import { useEffect,useState } from 'react';
+import { useTheme } from 'next-themes';
+
 export default function Navbar() {
+  const [mounted,setMounted] = useState(false);
+  const { setTheme,resolvedTheme  } = useTheme();
+  useEffect(()=>{setMounted(true)},[]);
+  if(!mounted) {
+    return null;
+  }
+  const handleTheme = () => {
+    setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
+  };
   return (
-    <div className='flex items-center justify-between p-2'>
-      <div className='logo'>
-        <Image src={logo} alt="Photo" className='w-14' />
+    <>
+      <div className='flex items-center justify-between'>
+        <div className='flex items-center gap-12'>
+          <div className='logo'>
+            <Image src={logo} alt="Photo" className='w-14' />
+          </div>
+          <nav className="flex items-center gap-8 ">
+            <Link className='m-0 px-3 py-2 rounded-xl hover:bg-white/5' href="/">Home</Link>
+            <Link className='m-0 px-3 py-2 rounded-xl hover:bg-white/5' href="/about">About</Link>
+            <Link className='m-0 px-3 py-2 rounded-xl hover:bg-white/5' href="/projects">Projects</Link>
+          </nav>
+        </div>
+        <div className='flex items-center gap-4'>
+          <button onClick={handleTheme} className="flex p-2 transition rounded-full dark:hover:bg-white/20 border border-black dark:border-white cursor-pointer">
+            {
+              resolvedTheme === 'dark' ? (
+                <i className='bx bxs-sun'></i>
+              ) : (
+                <i className='bx bxs-moon'></i>
+              )
+            }
+          </button>
+          <button className='flex items-center gap-2 dark:bg-white bg-black text-black py-2 px-4 rounded-xl cursor-pointer'>< i className='bx  bx-phone'  ></i> Contact Me</button>
+        </div>
       </div>
-      <div className='flex-1 flex  items-center justify-center'>
-        <nav className="w-1/3 flex items-center justify-between space-x-4 py-4 px-6  text-white border-[#ffffff69] border-1 rounded-2xl bg-white/5">
-          <Link className='m-0' href="/">Home</Link>
-          <Link className='m-0' href="/about">About</Link>
-          <Link className='m-0' href="/projects">Projects</Link>
-        </nav>
-      </div>
-      
-        <button className='flex items-center gap-2 bg-white text-black py-2 px-4 rounded-xl cursor-pointer'>< i class='bx  bx-phone'  ></i> Contact Me</button>
-    </div>
+    </>
   );
 }

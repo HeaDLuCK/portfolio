@@ -21,11 +21,11 @@ export default function RootLayout({
 }>) {
 
   return (
-    <html lang="en" className={`${poppins.variable}`} suppressHydrationWarning>
-      <body className="max-w-screen-xl mx-auto m-4">
+    <html lang="en" className={`${poppins.variable} h-full`} suppressHydrationWarning>
+      <body className="max-w-screen-xl mx-auto m-4 flex flex-col min-h-full">
         <ThemeProvider attribute="class" enableSystem={true}>
           <Navbar />
-          <main >
+          <main className="flex-1">
             {children}
           </main>
           <footer className="text-center text-gray-500 mt-10">

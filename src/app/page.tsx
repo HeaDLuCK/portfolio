@@ -91,7 +91,7 @@ export default function Home() {
           <p className="max-w-[100px] dark:text-white/80  text-black/70">Technical Skills</p>
         </div>
       </div>
-      <div className="mt-8   bg-gradient-to-t md:bg-gradient-to-tl bg-black  via-blue-950/70 dark:from-indigo-950/20d dark:via-blue-950/50 to-transparent border
+      <div className="mt-8   bg-gradient-to-t md:bg-gradient-to-tl bg-black  via-blue-950/70 dark:from-indigo-950/20 dark:via-blue-950/50 to-transparent border
        border-[#333] rounded-3xl p-8 flex flex-col items-center gap-5">
         <span className=" bg-black/40 rounded-2xl border-[#333] border  p-2 text-xs text-white ">Share your thoughts</span>
         <h2 className="text-3xl font-bold text-indigo-300 tracking-wide">Love to hear from you</h2>

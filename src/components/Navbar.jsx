@@ -3,13 +3,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../assets/test.png';
 import 'boxicons/css/boxicons.min.css';
-import { useEffect,useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 
 export default function Navbar() {
-  const [mounted,setMounted] = useState(false);
-  const { setTheme,resolvedTheme  } = useTheme();
-  useEffect(()=>{setMounted(true)},[]);
+  const [mounted, setMounted] = useState(false);
+  const { setTheme, resolvedTheme } = useTheme();
+  useEffect(() => { setMounted(true) }, []);
   const handleTheme = () => {
     setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
   };
@@ -30,13 +30,13 @@ export default function Navbar() {
           <button onClick={handleTheme} className="flex p-2 transition rounded-full dark:hover:bg-white/20 border border-black dark:border-white cursor-pointer">
             {mounted &&
               resolvedTheme === 'dark' ? (
-                <i className='bx bxs-sun'></i>
-              ) : (
-                <i className='bx bxs-moon'></i>
-              )
+              <i className='bx bxs-sun'></i>
+            ) : (
+              <i className='bx bxs-moon'></i>
+            )
             }
           </button>
-          <button className='flex items-center gap-2 dark:bg-white border border-black text-black py-2 px-4 rounded-xl cursor-pointer'>< i className='bx  bx-phone'  ></i> Contact Me</button>
+          <Link className='flex items-center gap-2 dark:bg-white border border-black text-black py-2 px-4 rounded-xl cursor-pointer' href="/contact">< i className='bx  bx-phone'  ></i> Contact Me </Link>
         </div>
       </div>
     </>

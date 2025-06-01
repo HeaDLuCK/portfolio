@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import Image from "next/image";
 import devoxImg from '../assets/meinDevox.jpg';
 import { Typewriter } from 'react-simple-typewriter';
@@ -96,7 +97,7 @@ export default function Home() {
         <span className=" bg-black/40 rounded-2xl border-[#333] border  p-2 text-xs text-white ">Share your thoughts</span>
         <h2 className="text-3xl font-bold text-indigo-300 tracking-wide">Love to hear from you</h2>
         <p className="text-white ">Always open to ideas, feedback, or a good conversation—because great things happen when we connect and share.</p>
-        <button className='flex items-center gap-2 bg-white text-black py-2 px-4 rounded-xl cursor-pointer'>Contact Me</button>
+       <Link className='flex items-center gap-2 bg-white text-black py-2 px-4 rounded-xl cursor-pointer' href="/contact">Contact Me</Link>
       </div>
     </>
   );

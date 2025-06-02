@@ -1,6 +1,6 @@
 const Education = () => {
     return (
-        <div className="education flex flex-col gap-5">
+        <div className="education flex flex-col gap-5 h-full">
             <h2 className=" text-4xl font-bold flex items-center gap-2">Education <i className='bx bxs-graduation'></i> </h2>
             <p>I’ve always believed that learning never really stops — especially in tech. Whether it's through school or just diving into something new on my own,
                 I’m always picking up new skills and exploring better ways to build things.

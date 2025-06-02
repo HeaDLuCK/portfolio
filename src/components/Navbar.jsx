@@ -1,10 +1,11 @@
 'use client';
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '../assets/test.png';
+import logo from '../assets/no-bg-logo.png';
 import 'boxicons/css/boxicons.min.css';
 import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
+
 
 export default function Navbar() {
   const [mounted, setMounted] = useState(false);

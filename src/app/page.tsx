@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import devoxImg from '../assets/meinDevox.jpg';
 import { Typewriter } from 'react-simple-typewriter';
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 export default function Home() {
   return (
     <>
@@ -38,7 +39,28 @@ export default function Home() {
           </p>
         </div>
       </div>
+      <div className="flex  gap-6 items-center p-4">
+        <a href="https://github.com/missouzakaria" target="_blank" rel="noopener noreferrer" className="hover:scale-110 text-white hover:text-indigo-500 transition-transform flex items-center gap-2">
+          <i className="text-2xl ">
+            <FaGithub /> 
+          </i>
+           Github
+        </a>
 
+        <a href="https://linkedin.com/in/missouzakaria" target="_blank" rel="noopener noreferrer" className="hover:scale-110 text-white hover:text-indigo-500 transition-transform flex items-center gap-2">
+          <i className="text-2xl ">
+            <FaLinkedin /> 
+          </i>
+          Linkedin
+        </a>
+
+        <a href="https://instagram.com/missouzakaria" target="_blank" rel="noopener noreferrer" className="hover:scale-110 text-white hover:text-pink-500  transition-transform flex items-center gap-2">
+          <i className="text-2xl ">
+            <FaInstagram /> 
+          </i>
+          Instagram
+        </a>
+      </div>
       <div className="mt-8 flex justify-between items-start">
         <div className="flex-1 mt-12">
           <h2 className="text-3xl font-bold ">About Me</h2>
@@ -97,7 +119,7 @@ export default function Home() {
         <span className=" bg-black/40 rounded-2xl border-[#333] border  p-2 text-xs text-white ">Share your thoughts</span>
         <h2 className="text-3xl font-bold text-indigo-300 tracking-wide">Love to hear from you</h2>
         <p className="text-white ">Always open to ideas, feedback, or a good conversation—because great things happen when we connect and share.</p>
-       <Link className='flex items-center gap-2 bg-white text-black py-2 px-4 rounded-xl cursor-pointer' href="/contact">Contact Me</Link>
+        <Link className='flex items-center gap-2 bg-white text-black py-2 px-4 rounded-xl cursor-pointer' href="/contact">Contact Me</Link>
       </div>
     </>
   );

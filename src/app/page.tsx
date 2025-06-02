@@ -40,21 +40,21 @@ export default function Home() {
         </div>
       </div>
       <div className="flex  gap-6 items-center p-4">
-        <a href="https://github.com/missouzakaria" target="_blank" rel="noopener noreferrer" className="hover:scale-110 text-white hover:text-indigo-500 transition-transform flex items-center gap-2">
+        <a href="https://github.com/HeaDLuCK" target="_blank" rel="noopener noreferrer" className="hover:scale-110 text-white hover:text-indigo-500 transition-transform flex items-center gap-2">
           <i className="text-2xl ">
             <FaGithub /> 
           </i>
            Github
         </a>
 
-        <a href="https://linkedin.com/in/missouzakaria" target="_blank" rel="noopener noreferrer" className="hover:scale-110 text-white hover:text-indigo-500 transition-transform flex items-center gap-2">
+        <a href="https://linkedin.com/in/zakaria-missou" target="_blank" rel="noopener noreferrer" className="hover:scale-110 text-white hover:text-indigo-500 transition-transform flex items-center gap-2">
           <i className="text-2xl ">
             <FaLinkedin /> 
           </i>
           Linkedin
         </a>
 
-        <a href="https://instagram.com/missouzakaria" target="_blank" rel="noopener noreferrer" className="hover:scale-110 text-white hover:text-pink-500  transition-transform flex items-center gap-2">
+        <a href="https://instagram.com/zakaria_miss" target="_blank" rel="noopener noreferrer" className="hover:scale-110 text-white hover:text-pink-500  transition-transform flex items-center gap-2">
           <i className="text-2xl ">
             <FaInstagram /> 
           </i>

@@ -16,12 +16,12 @@ export default function Navbar() {
   };
   return (
     <>
-      <div className='flex items-center justify-between'>
+      <div className='flex items-center justify-between mx-4 md:mx-0'>
         <div className='flex items-center gap-12'>
           <div className='logo'>
             <Image src={logo} alt="Photo" className='w-14 invert dark:invert-0' />
           </div>
-          <nav className="flex items-center gap-8 ">
+          <nav className="hidden items-center gap-8  md:flex">
             <Link className='m-0 px-3 py-2 rounded-xl hover:bg-black/10 dark:hover:bg-white/10' href="/">Home</Link>
             <Link className='m-0 px-3 py-2 rounded-xl hover:bg-black/10 dark:hover:bg-white/10' href="/about">About</Link>
             <Link className='m-0 px-3 py-2 rounded-xl hover:bg-black/10 dark:hover:bg-white/10' href="/projects">Projects</Link>
@@ -37,7 +37,7 @@ export default function Navbar() {
             )
             }
           </button>
-          <Link className='flex items-center gap-2 dark:bg-white border border-black text-black py-2 px-4 rounded-xl cursor-pointer' href="/contact">< i className='bx  bx-phone'  ></i> Contact Me </Link>
+          <Link className='hidden md:flex items-center gap-2 dark:bg-white border border-black text-black py-2 px-4 rounded-xl cursor-pointer' href="/contact">< i className='bx  bx-phone'  ></i> Contact Me </Link>
         </div>
       </div>
     </>

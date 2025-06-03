@@ -7,16 +7,16 @@ import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 export default function Home() {
   return (
     <>
-      <div className="mt-8 relative overflow-hidden rounded-3xl shadow-2xl">
+      <div className="mt-8 mx-4 md:mx-0 relative overflow-hidden rounded-3xl shadow-2xl">
         <div>
-          <Image src={devoxImg} alt="" />
+          <Image src={devoxImg} alt="" className='h-72 object-cover md:h-full '  style={{ objectPosition: '75% center' }}   />
           <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-indigo-950/70 via-blue-950/70  to-transparent"></div>
         </div>
 
         <div className="absolute top-0  w-1/2 h-full flex flex-col gap-8 backdrop-blur-xs">
-          <h1 className="ml-5 text-4xl font-bold text-white mt-20">
+          <h1 className="ml-5 md:text-4xl font-bold text-white mt-4 md:mt-20">
             Hey, I'm
-            <span className="text-indigo-400">
+            <span className="text-indigo-400 ">
               <Typewriter
                 words={[' Zakaria Missou', ' FullStack Developer', ' Web Enthusiast']}
                 loop={true}
@@ -27,41 +27,41 @@ export default function Home() {
                 delaySpeed={2000}
               /></span>
           </h1>
-          <p className="ml-5 text-lg text-gray-300 ">
+          <p className="ml-5 text-lg text-gray-300 hidden md:block">
             I’m a passionate FullStack Web Developer from Morocco with expertise in modern web technologies.
             I specialize in building responsive, user-friendly web applications that bring ideas to life and create meaningful digital experiences.
             Constantly eager to learn and innovate, I enjoy exploring new tools and pushing the boundaries of web development.
           </p>
         </div>
         <div>
-          <p className="absolute bottom-5 left-5 text-white text-md bg-black/40 px-4 py-2 rounded-lg shadow">
+          <p className="absolute bottom-5 left-5 text-white text-md bg-black/40 px-4 py-2 rounded-lg shadow text-xs md:text-base">
             Fueled by Java: the language and the liquid. <span>☕</span>
           </p>
         </div>
       </div>
-      <div className="flex  gap-6 items-center p-4">
-        <a href="https://github.com/HeaDLuCK" target="_blank" rel="noopener noreferrer" className="hover:scale-110 text-white hover:text-indigo-500 transition-transform flex items-center gap-2">
+      <div className="flex  gap-6 items-center md:justify-normal justify-between p-4 text-sm md:text-base">
+        <a href="https://github.com/HeaDLuCK" target="_blank" rel="noopener noreferrer" className="hover:scale-110 dark:text-white hover:text-indigo-500 transition-transform flex items-center gap-2">
           <i className="text-2xl ">
             <FaGithub /> 
           </i>
            Github
         </a>
 
-        <a href="https://linkedin.com/in/zakaria-missou" target="_blank" rel="noopener noreferrer" className="hover:scale-110 text-white hover:text-indigo-500 transition-transform flex items-center gap-2">
+        <a href="https://linkedin.com/in/zakaria-missou" target="_blank" rel="noopener noreferrer" className="hover:scale-110 dark:text-white  hover:text-indigo-500 transition-transform flex items-center gap-2">
           <i className="text-2xl ">
             <FaLinkedin /> 
           </i>
           Linkedin
         </a>
 
-        <a href="https://instagram.com/zakaria_miss" target="_blank" rel="noopener noreferrer" className="hover:scale-110 text-white hover:text-pink-500  transition-transform flex items-center gap-2">
+        <a href="https://instagram.com/zakaria_miss" target="_blank" rel="noopener noreferrer" className="hover:scale-110 dark:text-white hover:text-pink-500  transition-transform flex items-center gap-2">
           <i className="text-2xl ">
             <FaInstagram /> 
           </i>
           Instagram
         </a>
       </div>
-      <div className="mt-8 flex justify-between items-start">
+      <div className="mt-8 flex md:flex-row flex-col justify-between items-start">
         <div className="flex-1 mt-12">
           <h2 className="text-3xl font-bold ">About Me</h2>
           <p className=" text-gray-600 mt-4 max-w-2xl mx-auto">
@@ -101,16 +101,16 @@ export default function Home() {
         </div>
       </div>
       <div className="mt-8 flex justify-between items-start">
-        <div className="flex items-end gap-2">
-          <span className="text-6xl font-bold">12</span>
+        <div className="flex items-center gap-2">
+          <span className="text-6xl font-bold">2</span>
           <span className="max-w-[100px] dark:text-white/80  text-black/70">Years of experience</span>
         </div>
-        <div className="flex items-end gap-2">
-          <span className="text-6xl font-bold">12</span>
+        <div className="flex items-center gap-2">
+          <span className="text-6xl font-bold">4</span>
           <span className="max-w-[100px] dark:text-white/80  text-black/70">Projects Completed</span>
         </div>
-        <div className="flex items-end gap-2">
-          <span className="text-6xl font-bold">12</span>
+        <div className="flex items-center gap-2">
+          <span className="text-6xl font-bold">20</span>
           <p className="max-w-[100px] dark:text-white/80  text-black/70">Technical Skills</p>
         </div>
       </div>

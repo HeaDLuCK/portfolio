@@ -5,7 +5,7 @@ const Education = () => {
             <p>I’ve always believed that learning never really stops — especially in tech. Whether it's through school or just diving into something new on my own,
                 I’m always picking up new skills and exploring better ways to build things.
                 Here’s a quick look at where my learning journey has taken me so far.</p>
-            <div className="grid grid-cols-[repeat(2,350px)] gap-4 ">
+            <div className="grid grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] md:grid-cols-[repeat(2,350px)] gap-4 ">
                 <div className="flex flex-col  bg-white h-36 dark:bg-gray-800 p-4 rounded-lg shadow-md gap-3">
                     <h3 className="w-max font-bold text-sm text-start"> 🎮 Game Development with Unity <small className="font-semibold">(Udemy)</small></h3>
                     <p className="text-sm font-medium">Currently learning Unity & C# for 2D/3D games.</p>

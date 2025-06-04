@@ -7,7 +7,7 @@ import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 export default function Home() {
   return (
     <>
-      <div className="mt-8 mx-4 md:mx-0 relative overflow-hidden rounded-3xl shadow-2xl">
+      <div className="mt-8  md:mx-0 relative overflow-hidden rounded-3xl shadow-2xl">
         <div>
           <Image src={devoxImg} alt="" className='h-72 object-cover md:h-full '  style={{ objectPosition: '75% center' }}   />
           <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-indigo-950/70 via-blue-950/70  to-transparent"></div>
@@ -76,49 +76,49 @@ export default function Home() {
           </p>
         </div>
         <div className="flex-1 ">
-          <div className="m-12 p-4 rounded-xl grid grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] gap-4 border border-[#333]
+          <div className=" mt-12 md:m-12 p-4 rounded-xl grid grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] md:grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] gap-4 border border-[#333]
            bg-gradient-to-tr md:bg-gradient-to-tr bg-black  via-blue-950/70 dark:from-indigo-950/40 dark:via-blue-950/40 to-transparent">
-            <div className="flex flex-col gap-2 p-2  h-32 rounded-xl border  border-[#333] bg-white/5  backdrop-blur-md">
-              <h3 className="text-center font-semibold text-md text-white">Frontend Development</h3>
-              <p className="font-medium text-sm text-gray-400 ">Building responsive and interactive user interfaces using modern frameworks and best practices.</p>
+            <div className="flex flex-col gap-2 p-2 h-36  md:h-32 rounded-xl border  border-[#333] bg-white/5  backdrop-blur-md">
+              <h3 className="text-center font-semibold text-sm md:text-md text-white">Frontend Development</h3>
+              <p className="font-medium text-xs md:text-sm text-gray-400 ">Building responsive and interactive user interfaces using modern frameworks and best practices.</p>
             </div>
-            <div className="flex flex-col gap-2 p-2  h-32 rounded-xl border  border-[#333] bg-white/5  backdrop-blur-md">
-              <h3 className="text-center font-semibold text-md text-white">Backend Development</h3>
-              <p className="font-medium text-sm text-gray-400">Developing robust server-side applications, APIs, and efficient database solutions.</p>
+            <div className="flex flex-col gap-2 p-2  h-36  md:h-32 rounded-xl border  border-[#333] bg-white/5  backdrop-blur-md">
+              <h3 className="text-center font-semibold text-sm md:text-md text-white">Backend Development</h3>
+              <p className="font-medium text-xs md:text-sm text-gray-400">Developing robust server-side applications, APIs, and efficient database solutions.</p>
             </div>
-            <div className="flex flex-col gap-2 p-2  h-32 rounded-xl border  border-[#333] bg-white/5  backdrop-blur-md">
-              <h3 className="text-center font-semibold text-md text-white">Responsive Design</h3>
-              <p className="font-medium text-sm text-gray-400">Ensuring seamless functionality and aesthetics across all devices and screen sizes.</p>
+            <div className="flex flex-col gap-2 p-2  h-36  md:h-32 rounded-xl border  border-[#333] bg-white/5  backdrop-blur-md">
+              <h3 className="text-center font-semibold text-sm md:text-md text-white">Responsive Design</h3>
+              <p className="font-medium text-xs md:text-sm text-gray-400">Ensuring seamless functionality and aesthetics across all devices and screen sizes.</p>
             </div>
-            <div className="flex flex-col gap-2 p-2  h-32 rounded-xl border  border-[#333] bg-white/5  backdrop-blur-md">
-              <h3 className="text-center font-semibold text-md text-white">Performance Optimization</h3>
-              <p className="font-medium text-sm text-gray-400">Optimizing web applications for speed, scalability, and an enhanced user experience.</p>
+            <div className="flex flex-col gap-2 p-2  h-36  md:h-32 rounded-xl border  border-[#333] bg-white/5  backdrop-blur-md">
+              <h3 className="text-center font-semibold text-sm md:text-md text-white">Performance Optimization</h3>
+              <p className="font-medium text-xs md:text-sm text-gray-400">Optimizing web applications for speed, scalability, and an enhanced user experience.</p>
             </div>
             <button className="col-span-full border border-[#333]  text-white
               w-fit mx-auto px-4 py-2 rounded-xl bg-white/5  backdrop-blur-md cursor-pointer
-              hover:bg-white/20 transition-all">Donwload CV</button>
+              hover:bg-white/20 transition-all text-sm md:text-base">Donwload CV</button>
           </div>
         </div>
       </div>
       <div className="mt-8 flex justify-between items-start">
-        <div className="flex items-center gap-2">
-          <span className="text-6xl font-bold">2</span>
-          <span className="max-w-[100px] dark:text-white/80  text-black/70">Years of experience</span>
+        <div className="flex flex-col md:flex-row justify-center md:justify-normal items-center md:gap-2 ">
+          <span className="text-3xl md:text-6xl font-bold">2</span>
+          <span className="md:max-w-[100px] dark:text-white/80  text-black/70 text-xs md:text-base">Years of experience</span>
         </div>
-        <div className="flex items-center gap-2">
-          <span className="text-6xl font-bold">4</span>
-          <span className="max-w-[100px] dark:text-white/80  text-black/70">Projects Completed</span>
+        <div className="flex flex-col md:flex-row justify-center md:justify-normal items-center md:gap-2">
+          <span className="text-3xl md:text-6xl font-bold">4</span>
+          <span className="md:max-w-[100px] dark:text-white/80  text-black/70 text-xs md:text-base">Projects Completed</span>
         </div>
-        <div className="flex items-center gap-2">
-          <span className="text-6xl font-bold">20</span>
-          <p className="max-w-[100px] dark:text-white/80  text-black/70">Technical Skills</p>
+        <div className="flex flex-col md:flex-row justify-center md:justify-normal items-center md:gap-2">
+          <span className="text-3xl md:text-6xl font-bold">20</span>
+          <p className="md:max-w-[100px] dark:text-white/80  text-black/70 text-xs md:text-base">Technical Skills</p>
         </div>
       </div>
       <div className="mt-8   bg-gradient-to-t md:bg-gradient-to-tl bg-black  via-blue-950/70 dark:from-indigo-950/20 dark:via-blue-950/50 to-transparent border
        border-[#333] rounded-3xl p-8 flex flex-col items-center gap-5">
         <span className=" bg-black/40 rounded-2xl border-[#333] border  p-2 text-xs text-white ">Share your thoughts</span>
-        <h2 className="text-3xl font-bold text-indigo-300 tracking-wide">Love to hear from you</h2>
-        <p className="text-white ">Always open to ideas, feedback, or a good conversation—because great things happen when we connect and share.</p>
+        <h2 className="text-xl d:text-3xl font-bold text-indigo-300 tracking-wide">Love to hear from you</h2>
+        <p className="text-white text-center md:text-base text-sm">Always open to ideas, feedback, or a good conversation—because great things happen when we connect and share.</p>
         <Link className='flex items-center gap-2 bg-white text-black py-2 px-4 rounded-xl cursor-pointer' href="/contact">Contact Me</Link>
       </div>
     </>

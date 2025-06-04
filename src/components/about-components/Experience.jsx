@@ -6,7 +6,7 @@ const experience = () => {
                 I worked on improving and extending an existing system using Java and web technologies, focusing on code refactoring, performance enhancements,
                 and new feature development.
                 This experience helped me grow as a developer and strengthened my understanding of clean code and collaborative development.</p>
-            <div className="grid grid-cols-[repeat(2,350px)] gap-4 ">
+            <div className="grid grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] md:grid-cols-[repeat(2,350px)]  gap-4 ">
                 <div className="flex flex-col  bg-white h-36 dark:bg-gray-800 p-4 rounded-lg shadow-md  justify-between">
                     <div className="flex flex-col gap-3">
                         <h3 className="w-max font-semibold text-start"> 09/2023 - present</h3>

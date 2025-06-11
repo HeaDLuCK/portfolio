@@ -4,12 +4,15 @@ import Image from "next/image";
 import devoxImg from '../assets/meinDevox.jpg';
 import { Typewriter } from 'react-simple-typewriter';
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import CvPopUp from '../components/home/CvPopUp';
+import { useState } from 'react';
 export default function Home() {
+  const [cvPopUpOpen, setCvPopUpOpen] = useState(false);
   return (
     <>
       <div className="mt-8  md:mx-0 relative overflow-hidden rounded-3xl shadow-2xl">
         <div>
-          <Image src={devoxImg} alt="" className='h-72 object-cover md:h-full '  style={{ objectPosition: '75% center' }}   />
+          <Image src={devoxImg} alt="" className='h-72 object-cover md:h-full ' style={{ objectPosition: '75% center' }} />
           <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-indigo-950/70 via-blue-950/70  to-transparent"></div>
         </div>
 
@@ -42,21 +45,21 @@ export default function Home() {
       <div className="flex  gap-6 items-center md:justify-normal justify-between p-4 text-sm md:text-base">
         <a href="https://github.com/HeaDLuCK" target="_blank" rel="noopener noreferrer" className="hover:scale-110 dark:text-white hover:text-indigo-500 transition-transform flex items-center gap-2">
           <i className="text-2xl ">
-            <FaGithub /> 
+            <FaGithub />
           </i>
-           Github
+          Github
         </a>
 
         <a href="https://linkedin.com/in/zakaria-missou" target="_blank" rel="noopener noreferrer" className="hover:scale-110 dark:text-white  hover:text-indigo-500 transition-transform flex items-center gap-2">
           <i className="text-2xl ">
-            <FaLinkedin /> 
+            <FaLinkedin />
           </i>
           Linkedin
         </a>
 
         <a href="https://instagram.com/zakaria_miss" target="_blank" rel="noopener noreferrer" className="hover:scale-110 dark:text-white hover:text-pink-500  transition-transform flex items-center gap-2">
           <i className="text-2xl ">
-            <FaInstagram /> 
+            <FaInstagram />
           </i>
           Instagram
         </a>
@@ -96,7 +99,8 @@ export default function Home() {
             </div>
             <button className="col-span-full border border-[#333]  text-white
               w-fit mx-auto px-4 py-2 rounded-xl bg-white/5  backdrop-blur-md cursor-pointer
-              hover:bg-white/20 transition-all text-sm md:text-base">Donwload CV</button>
+              hover:bg-white/20 transition-all text-sm md:text-base"
+              onClick={()=>setCvPopUpOpen(true)}>Donwload CV</button>
           </div>
         </div>
       </div>
@@ -121,6 +125,9 @@ export default function Home() {
         <p className="text-white text-center md:text-base text-sm">Always open to ideas, feedback, or a good conversation—because great things happen when we connect and share.</p>
         <Link className='flex items-center gap-2 bg-white text-black py-2 px-4 rounded-xl cursor-pointer' href="/contact">Contact Me</Link>
       </div>
+
+      { cvPopUpOpen &&  <CvPopUp onClose={()=>setCvPopUpOpen(false)} />}
+
     </>
   );
 }

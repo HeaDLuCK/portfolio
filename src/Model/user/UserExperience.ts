@@ -3,7 +3,13 @@ var ObjectId = Schema.Types.ObjectId;
 
 const userExperienceSchema = new mongoose.Schema({
     company_name: String,
-    position: String,
+    translations: [
+        {
+            lang: { type: String, required: true }, // e.g. "en", "fr", "ar", "de"
+            position: String,
+            description: String
+        }
+    ],
     date_start: Date,
     date_end: Date,
     userId: {

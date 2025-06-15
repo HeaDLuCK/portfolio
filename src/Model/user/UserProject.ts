@@ -2,8 +2,13 @@ import mongoose, { Schema } from "mongoose";
 var ObjectId = Schema.Types.ObjectId;
 
 const userProjectSchema = new mongoose.Schema({
-  title: String,
-  description: String,
+  translations: [
+    {
+      lang: { type: String, required: true }, // e.g. "en", "fr", "ar", "de"
+      title: String,
+      description: String
+    }
+  ],  
   url: String,
   img_path: String,
   userId: {

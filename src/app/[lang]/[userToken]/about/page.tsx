@@ -1,8 +1,8 @@
 'use client'
-import Education from '../../components/about-components/Education';
-import Experience from '../../components/about-components/Experience';
-import KnowMore from '../../components/about-components/KnowMore';
-import Skills from '../../components/about-components/Skills';
+import Education from '../../../../components/about-components/Education';
+import Experience from '../../../../components/about-components/Experience';
+import KnowMore from '../../../../components/about-components/KnowMore';
+import Skills from '../../../../components/about-components/Skills';
 import { useState } from 'react'
 export default function Home() {
     const [activeSession, setActiveSession] = useState('education');

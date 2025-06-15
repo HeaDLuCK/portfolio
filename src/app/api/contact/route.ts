@@ -1,16 +1,30 @@
 import { NextResponse } from "next/server";
 import { dbConnect } from "@/lib/db";
+import sendMail from "@/Service/mailService";
+import ContactMessage from "@/Model/ContactMessage ";
 
 export async function GET() {
-  const db = await dbConnect();
-  // save project to database
-  return NextResponse.json({ message: "Project created" }, { status: 201 });
+    await dbConnect();
+    // save project to database
+    return NextResponse.json({ message: "Project created" }, { status: 201 });
 }
 export async function POST(req: Request) {
-  const db = await dbConnect();
-  db.connect
-  const body = await req.json();
-  console.log("Received data:", body);
-  // save project to database
-  return NextResponse.json({ message: "Project created", body }, { status: 201 });
+    await dbConnect();
+    const body = await req.json();
+    // Validate the request body
+    console.log("Received body:", body);
+    if (!body.name || !body.email || !body.subject || !body.comment) {
+        return NextResponse.json(
+            { error: "All fields are required" },
+            { status: 400 }
+        );
+    }
+    ContactMessage.create({
+        name: body.name,
+        email: body.email,
+        subject: body.subject,
+        comment: body.comment,
+    });
+    sendMail(body.name, body.email, body.name, body.comment);
+    return NextResponse.json({ message: "Project created", body }, { status: 201 });
 }

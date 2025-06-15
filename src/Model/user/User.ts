@@ -7,6 +7,7 @@ const UserSchema = new mongoose.Schema({
   email: String,
   phone: String,
   nationality: String,
+  token: String,
 }, { timestamps: true });
 const User = mongoose.models.User || mongoose.model("User", UserSchema);
 export default User;

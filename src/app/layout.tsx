@@ -10,7 +10,7 @@ const poppins = Poppins({
 })
 export const metadata: Metadata = {
   title: "Zakaria Missou | FullStack Developer",
-  keywords: ["Zakaria Missou", "FullStack Developer", "Web Development", "JavaScript", "React", "Node.js","AI"],
+  keywords: ["Missou" , "Zakaria","Java","front-end","back-end","Zakaria Missou", "FullStack Developer", "Web Development", "JavaScript", "React", "Node.js","AI"],
   description: "I’m a passionate FullStack Web Developer from Morocco with expertise in modern web technologies. I specialize in building responsive, user-friendly web applications that bring ideas to life and create meaningful digital experiences.",
 };
 import Navbar from '../components/Navbar';

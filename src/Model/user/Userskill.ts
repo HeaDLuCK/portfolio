@@ -2,7 +2,12 @@ import mongoose, { Schema } from "mongoose";
 var ObjectId = Schema.Types.ObjectId;
 
 const userSkillSchema = new mongoose.Schema({
-    title: String,
+    translations: [
+        {
+            lang: { type: String, required: true }, // e.g. "en", "fr", "ar", "de"
+            title: String,
+        }
+    ],
     icon: {
         type: String,//image or icon for box icon
         value: String

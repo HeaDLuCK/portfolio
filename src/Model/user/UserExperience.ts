@@ -17,5 +17,5 @@ const userExperienceSchema = new mongoose.Schema({
         ref: 'User'
     },
 }, { timestamps: true });
-const UserExperience = mongoose.models.User || mongoose.model("UserExperience", userExperienceSchema);
+const UserExperience = mongoose.models.UserExperience || mongoose.model("UserExperience", userExperienceSchema);
 export default UserExperience;

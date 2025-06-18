@@ -19,5 +19,5 @@ const userFeatureSchema = new mongoose.Schema({
         ref: 'User'
     },
 }, { timestamps: true });
-const UserFeature = mongoose.models.UserProject || mongoose.model("UserFeature", userFeatureSchema);
+const UserFeature = mongoose.models.UserFeature || mongoose.model("UserFeature", userFeatureSchema);
 export default UserFeature;

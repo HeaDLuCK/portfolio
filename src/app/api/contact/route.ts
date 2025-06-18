@@ -2,11 +2,12 @@ import { NextResponse } from "next/server";
 import { dbConnect } from "@/lib/db";
 import sendMail from "@/Service/mailService";
 import ContactMessage from "@/Model/ContactMessage ";
+import { getTokenAndLang } from '@/lib/cookies';
 
-export async function GET() {
+export async function GET(request: Request) {
     await dbConnect();
-    // save project to database
-    return NextResponse.json({ message: "Project created" }, { status: 201 });
+    const {token ,lang} = getTokenAndLang(request);
+    return NextResponse.json({ message: lang+"  "+token }, { status: 201 });
 }
 export async function POST(req: Request) {
     await dbConnect();

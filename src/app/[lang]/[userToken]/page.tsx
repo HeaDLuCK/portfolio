@@ -8,23 +8,72 @@ import CvPopUp from '../../../components/home/CvPopUp';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 export default function Home() {
-  useEffect(() => {
-    axios.get('/api/{token}')
+  const [loading, setLoading] = useState(true);
+  const [heroContent, setHeroContent] = useState<any>(null);
+  const [aboutContent, setAboutContent] = useState<any>(null);
+  const [experienceContent, setExperienceContent] = useState(0);
+  const [projectsContent, setProjectsContent] = useState(0);
+  const [skillsContent, setSkillsContent] = useState(0);
+  const [footerContent, setFooterContent] = useState(null);
+
+  const getContent = (section: string) => {
+    return axios.get(`/api/user/content?section=${section}`)
       .then((response) => {
-        // const data = response.data;
-        // if (data && data.translations && data.translations.length > 0) {
-        //   const heroContent = data.translations.find((translation) => translation.lang === 'en');
-        //   if (heroContent) {
-        //     document.title = heroContent.heading || 'Home';
-        //   }
-        // }
+        if (response.status === 200) {
+          const { lang, content } = response.data;
+          if (content?.translations) {
+            content.translations.forEach((translation: any) => {
+              if (translation.lang.toLowerCase() === lang.toLowerCase()) {//it will be changed to dynamic lang
+                if (section === 'hero') {
+                  setHeroContent(translation);
+                } else if (section === 'about') {
+                  setAboutContent(translation);
+                }
+                else if (section === 'experience') {
+                  setExperienceContent(translation.description);
+                }
+                else if (section === 'projects') {
+                  setProjectsContent(translation.description);
+                }
+                else if (section === 'skills') {
+                  setSkillsContent(translation.description);
+                }
+                else if (section === 'footer') {
+                  setFooterContent(translation);
+                }
+              }
+            });
+          }
+
+        }
       })
       .catch((error) => {
-        // console.error('Error fetching hero section content:', error);
-      }
-    );
+        console.error('Error fetching hero section content:', error);
+      })
+    return "test"
+  };
+  useEffect(() => {
+    Promise.all([
+      getContent('hero'),
+      getContent('about'),
+      getContent('experience'),
+      getContent('projects'),
+      getContent('skills'),
+      getContent('footer')
+    ]);
   }, []);
+
+  useEffect(() => {
+    console.log('heroContent', heroContent);
+    console.log('aboutContent', aboutContent);
+    console.log('experienceContent', footerContent);
+    if (heroContent && aboutContent && footerContent) {
+      setLoading(false);
+    }
+  }, [heroContent, aboutContent, footerContent]);
+
   const [cvPopUpOpen, setCvPopUpOpen] = useState(false);
+  if (loading) return (<div className="flex justify-center items-center h-screen">Loading...</div>); //or a loading spinner
   return (
     <>
       <div className="mt-8  md:mx-0 relative overflow-hidden rounded-3xl shadow-2xl">
@@ -35,10 +84,10 @@ export default function Home() {
 
         <div className="absolute top-0  w-1/2 h-full flex flex-col gap-8 backdrop-blur-xs">
           <h1 className="ml-5 md:text-4xl font-bold text-white mt-4 md:mt-20">
-            Hey, I'm
+            {heroContent ? heroContent.heading : 'Hey, I\'m'}
             <span className="text-indigo-400 ">
               <Typewriter
-                words={[' Zakaria Missou', ' FullStack Developer', ' Web Enthusiast']}
+                words={heroContent ? heroContent.typewriter : []}
                 loop={true}
                 cursor
                 cursorStyle='|'
@@ -48,9 +97,7 @@ export default function Home() {
               /></span>
           </h1>
           <p className="ml-5 text-lg text-gray-300 hidden md:block">
-            I’m a passionate FullStack Web Developer from Morocco with expertise in modern web technologies.
-            I specialize in building responsive, user-friendly web applications that bring ideas to life and create meaningful digital experiences.
-            Constantly eager to learn and innovate, I enjoy exploring new tools and pushing the boundaries of web development.
+            {heroContent ? heroContent.description : ''}
           </p>
         </div>
         <div>
@@ -85,11 +132,7 @@ export default function Home() {
         <div className="flex-1 mt-12">
           <h2 className="text-3xl font-bold ">About Me</h2>
           <p className=" text-gray-600 mt-4 max-w-2xl mx-auto">
-            I started coding during the COVID era,
-            writing my first Python program and quickly falling in love with development.
-            Since then, I’ve been on a journey exploring different languages and frameworks,
-            always driven by curiosity and a passion for learning. When I’m not coding,
-            you’ll find me gaming or diving into new technologies.
+            {aboutContent && aboutContent.description}
             <a href="/about"
               className="inline-block ml-3 text-black dark:text-white  hover:underline font-semibold  "
             >Dive In!</a>
@@ -117,7 +160,7 @@ export default function Home() {
             <button className="col-span-full border border-[#333]  text-white
               w-fit mx-auto px-4 py-2 rounded-xl bg-white/5  backdrop-blur-md cursor-pointer
               hover:bg-white/20 transition-all text-sm md:text-base"
-              onClick={()=>setCvPopUpOpen(true)}>Donwload CV</button>
+              onClick={() => setCvPopUpOpen(true)}>Donwload CV</button>
           </div>
         </div>
       </div>
@@ -143,7 +186,7 @@ export default function Home() {
         <Link className='flex items-center gap-2 bg-white text-black py-2 px-4 rounded-xl cursor-pointer' href="/contact">Contact Me</Link>
       </div>
 
-      { cvPopUpOpen &&  <CvPopUp onClose={()=>setCvPopUpOpen(false)} />}
+      {cvPopUpOpen && <CvPopUp onClose={() => setCvPopUpOpen(false)} />}
 
     </>
   );

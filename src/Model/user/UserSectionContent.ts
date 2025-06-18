@@ -15,13 +15,17 @@ const userSectionContentSchema = new mongoose.Schema({
         }
     ],
     icon: {
-        type: String,//image or icon for box icon
-        value: String
+        type: {
+            type: String, //image or icon for box icon
+        },
+        value: {
+            type: String, // e.g. "/icons/hero-icon.svg"
+        }
     },
     userId: {
         type: ObjectId,
         ref: 'User'
     },
 }, { timestamps: true });
-const UserSectionContent = mongoose.models.UserProject || mongoose.model("UserSectionContent", userSectionContentSchema);
+const UserSectionContent = mongoose.models.UserSectionContent || mongoose.model("UserSectionContent", userSectionContentSchema);
 export default UserSectionContent;

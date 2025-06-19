@@ -11,6 +11,7 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [heroContent, setHeroContent] = useState<any>(null);
   const [aboutContent, setAboutContent] = useState<any>(null);
+  const [features, setFeatures] = useState<any>([]);
   const [experienceContent, setExperienceContent] = useState(0);
   const [projectsContent, setProjectsContent] = useState(0);
   const [skillsContent, setSkillsContent] = useState(0);
@@ -50,8 +51,27 @@ export default function Home() {
       .catch((error) => {
         console.error('Error fetching hero section content:', error);
       })
-    return "test"
   };
+  const getFeatures = () => {
+    return axios.get(`/api/user/feature`)
+            .then((response) => {
+              if (response.status === 200) {
+                const { lang, features } = response.data;
+                features.forEach((feature: any) => {
+                  feature.translations.forEach((translation: any) => {
+                    if (translation.lang.toLowerCase() === lang.toLowerCase()) {
+                      setFeatures((prevFeatures: any) => [...prevFeatures, {
+                        title: translation.title,
+                        description: translation.description,
+                        order :feature.order
+                      }]);
+                    }
+                  });
+                });
+              }
+            });
+    
+  }
   useEffect(() => {
     Promise.all([
       getContent('hero'),
@@ -59,18 +79,18 @@ export default function Home() {
       getContent('experience'),
       getContent('projects'),
       getContent('skills'),
-      getContent('footer')
+      getContent('footer'),
+      getFeatures()
+
     ]);
   }, []);
 
   useEffect(() => {
-    console.log('heroContent', heroContent);
-    console.log('aboutContent', aboutContent);
-    console.log('experienceContent', footerContent);
-    if (heroContent && aboutContent && footerContent) {
+    if (features && heroContent && aboutContent && footerContent) {
+      setFeatures(features.sort((a: any, b: any) => a.order - b.order));
       setLoading(false);
     }
-  }, [heroContent, aboutContent, footerContent]);
+  }, [features, heroContent, aboutContent, footerContent]);
 
   const [cvPopUpOpen, setCvPopUpOpen] = useState(false);
   if (loading) return (<div className="flex justify-center items-center h-screen">Loading...</div>); //or a loading spinner
@@ -141,22 +161,13 @@ export default function Home() {
         <div className="flex-1 ">
           <div className=" mt-12 md:m-12 p-4 rounded-xl grid grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] md:grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] gap-4 border border-[#333]
            bg-gradient-to-tr md:bg-gradient-to-tr bg-black  via-blue-950/70 dark:from-indigo-950/40 dark:via-blue-950/40 to-transparent">
-            <div className="flex flex-col gap-2 p-2 h-36  md:h-32 rounded-xl border  border-[#333] bg-white/5  backdrop-blur-md">
-              <h3 className="text-center font-semibold text-sm md:text-md text-white">Frontend Development</h3>
-              <p className="font-medium text-xs md:text-sm text-gray-400 ">Building responsive and interactive user interfaces using modern frameworks and best practices.</p>
-            </div>
-            <div className="flex flex-col gap-2 p-2  h-36  md:h-32 rounded-xl border  border-[#333] bg-white/5  backdrop-blur-md">
-              <h3 className="text-center font-semibold text-sm md:text-md text-white">Backend Development</h3>
-              <p className="font-medium text-xs md:text-sm text-gray-400">Developing robust server-side applications, APIs, and efficient database solutions.</p>
-            </div>
-            <div className="flex flex-col gap-2 p-2  h-36  md:h-32 rounded-xl border  border-[#333] bg-white/5  backdrop-blur-md">
-              <h3 className="text-center font-semibold text-sm md:text-md text-white">Responsive Design</h3>
-              <p className="font-medium text-xs md:text-sm text-gray-400">Ensuring seamless functionality and aesthetics across all devices and screen sizes.</p>
-            </div>
-            <div className="flex flex-col gap-2 p-2  h-36  md:h-32 rounded-xl border  border-[#333] bg-white/5  backdrop-blur-md">
-              <h3 className="text-center font-semibold text-sm md:text-md text-white">Performance Optimization</h3>
-              <p className="font-medium text-xs md:text-sm text-gray-400">Optimizing web applications for speed, scalability, and an enhanced user experience.</p>
-            </div>
+            {features && features.map((feature: any, index: number) => (
+              <div key={index} className="flex flex-col gap-2 p-2 h-36  md:h-32 rounded-xl border  border-[#333] bg-white/5  backdrop-blur-md">
+                <h3 className="text-center font-semibold text-sm md:text-md text-white">{feature.title}</h3>
+                <p className="font-medium text-xs md:text-sm text-gray-400 ">{feature.description}</p>
+              </div>
+            ))}
+            
             <button className="col-span-full border border-[#333]  text-white
               w-fit mx-auto px-4 py-2 rounded-xl bg-white/5  backdrop-blur-md cursor-pointer
               hover:bg-white/20 transition-all text-sm md:text-base"
@@ -166,15 +177,15 @@ export default function Home() {
       </div>
       <div className="mt-8 flex justify-between items-start">
         <div className="flex flex-col md:flex-row justify-center md:justify-normal items-center md:gap-2 ">
-          <span className="text-3xl md:text-6xl font-bold">2</span>
+          <span className="text-3xl md:text-6xl font-bold">{experienceContent}</span>
           <span className="md:max-w-[100px] dark:text-white/80  text-black/70 text-xs md:text-base">Years of experience</span>
         </div>
         <div className="flex flex-col md:flex-row justify-center md:justify-normal items-center md:gap-2">
-          <span className="text-3xl md:text-6xl font-bold">4</span>
+          <span className="text-3xl md:text-6xl font-bold">{projectsContent}</span>
           <span className="md:max-w-[100px] dark:text-white/80  text-black/70 text-xs md:text-base">Projects Completed</span>
         </div>
         <div className="flex flex-col md:flex-row justify-center md:justify-normal items-center md:gap-2">
-          <span className="text-3xl md:text-6xl font-bold">20</span>
+          <span className="text-3xl md:text-6xl font-bold">{skillsContent}</span>
           <p className="md:max-w-[100px] dark:text-white/80  text-black/70 text-xs md:text-base">Technical Skills</p>
         </div>
       </div>

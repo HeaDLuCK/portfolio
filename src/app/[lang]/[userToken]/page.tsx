@@ -55,6 +55,7 @@ export default function Home() {
   const getFeatures = () => {
     return axios.get(`/api/user/feature`)
             .then((response) => {
+              setFeatures([]); // Reset features adding data
               if (response.status === 200) {
                 const { lang, features } = response.data;
                 features.forEach((feature: any) => {
@@ -86,6 +87,7 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
+    console.log(features);
     if (features && heroContent && aboutContent && footerContent) {
       setFeatures(features.sort((a: any, b: any) => a.order - b.order));
       setLoading(false);

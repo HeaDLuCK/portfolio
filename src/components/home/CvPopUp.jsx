@@ -1,4 +1,4 @@
-const CvPopUp = ({onClose}) => {
+const CvPopUp = ({ onClose }) => {
   return (
     <div className='fixed top-0 left-0 flex items-center justify-center w-full h-full'>
       <div className="bg-white  dark:bg-gray-800 p-6 rounded-lg shadow-lg relative max-w-md w-full flex flex-col gap-4 items-center">

@@ -17,5 +17,5 @@ const userSkillSchema = new mongoose.Schema({
         ref: 'User'
     },
 }, { timestamps: true });
-const Userskill = mongoose.models.Userskill || mongoose.model("UserProject", userSkillSchema);
-export default Userskill;
+const UserSkill = mongoose.models.UserSkill || mongoose.model("UserSkill", userSkillSchema);
+export default UserSkill;

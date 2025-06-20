@@ -1,6 +1,5 @@
 import { MdEmail, MdLanguage } from 'react-icons/md';
 import { FaUser, FaGlobe, FaBirthdayCake, FaCode } from 'react-icons/fa';
-import { IoIosGitNetwork } from 'react-icons/io';
 
 const KnowMore = () => {
     return (

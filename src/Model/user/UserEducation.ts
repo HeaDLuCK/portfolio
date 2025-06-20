@@ -18,5 +18,5 @@ const userEducationSchema = new mongoose.Schema({
         ref: 'User'
     },
 }, { timestamps: true });
-const UserEducationSchema = mongoose.models.UserEducationSchema || mongoose.model("UserEducationSchema", userEducationSchema);
-export default UserEducationSchema;
+const UserEducation = mongoose.models.UserEducation || mongoose.model("UserEducation", userEducationSchema);
+export default UserEducation;

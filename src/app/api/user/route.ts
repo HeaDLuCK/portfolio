@@ -1,31 +1,25 @@
-import { NextResponse } from "next/server";
+import { getTokenAndLang } from "@/lib/cookies";
 import { dbConnect } from "@/lib/db";
-import sendMail from "@/Service/mailService";
-import User from "@/Model/user/User";
+import getUserInfo from "@/Service/userService";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(request: Request) {
-    await dbConnect();
-    // save project to database
-    const cookieHeader = request.headers.get('cookie') || '';
+export async function GET(req: NextRequest) {
+     await dbConnect();
+     const { token, lang } = getTokenAndLang(req);
+     if (!token && !lang) {
+          return NextResponse.json({ type: "by-token-lang", token, lang });
+     }
+     if (token) {
+          // Handle by section
+          const user_information = await getUserInfo(token);
+          return NextResponse.json({ lang, user_information }, { status: 200 });
+     }
 
-    // Simple helper to parse cookies into an object
-    const parseCookies = (cookieString: string) => {
-        return Object.fromEntries(
-        cookieString
-            .split('; ')
-            .map(cookie => cookie.split('='))
-        );
-    };
-
-    const cookies = parseCookies(cookieHeader);
-    const token = cookies['token'];
-    const lang = cookies['lang'];
-    console.log("Cookies:", cookies);
-    return NextResponse.json({ message: lang+"  "+token }, { status: 201 });
+     // If neither section nor token/lang is provided, return an error
+     return NextResponse.json({ error: "Missing id or section" }, { status: 400 });
 }
-export async function POST(req: Request) {
-    await dbConnect();
-    const body = await req.json();
+
+export async function POST(req: NextRequest) {
     
-    return NextResponse.json({ message: "Project created", body }, { status: 201 });
+     return NextResponse.json({ message: "POST request recei2ved" }, { status: 201 });
 }

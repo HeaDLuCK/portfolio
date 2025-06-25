@@ -12,7 +12,7 @@ const KnowMore = () => {
                     const { lang, user_information } = response.data;
                     const age = dayjs().diff(user_information.birthday, 'year');
                     user_information.age = age;
-
+                    console.log(user_information)
                     setInformation(user_information)
                     
                 }
@@ -37,7 +37,7 @@ const KnowMore = () => {
                     <strong className='text-indigo-800/70 flex items-center  text-nowrap '><MdEmail className="mr-2" /> Email : </strong> {information?.email}
                 </li>
                 <li className="flex items-center gap-2">
-                    <strong className='text-indigo-800/70 flex items-center  text-nowrap '><FaCode className="mr-2" /> Experience : </strong> 2 years
+                    <strong className='text-indigo-800/70 flex items-center  text-nowrap '><FaCode className="mr-2" /> Experience : </strong> {information?.exp_years +" years, " + information?.exp_months+" months"} 
                 </li>
                 <li className="flex items-center gap-2 md:text-nowrap md:w-max">
                     <strong className='text-indigo-800/70 flex items-center text-nowrap  '><MdLanguage className="mr-2" />Languages : </strong> Arabic, English, French, German

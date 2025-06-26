@@ -33,5 +33,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: '/:path*', // match all routes
+  matcher: ['/((?!^/admin).*)'], // match all routes
 };

@@ -30,6 +30,7 @@ export default function Navbar() {
     console.log(pathname);
     setMounted(true)
   }, []);
+  if (!mounted) return null;
   const handleTheme = () => {
     setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
   };

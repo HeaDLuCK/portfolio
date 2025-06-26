@@ -8,6 +8,18 @@ const UserSchema = new mongoose.Schema({
   phone: String,
   nationality: String,
   token: String,
+  languages: [
+    {
+      language: String,
+      level: String
+    }
+  ],
+  websites:[
+    {
+      platform:String,
+      link:String
+    }
+  ]
 }, { timestamps: true });
 const User = mongoose.models.User || mongoose.model("User", UserSchema);
 export default User;

@@ -21,7 +21,6 @@ export async function GET(req: NextRequest) {
           let totalMonths = 0;
           let totalDays = 0;
           experiences.forEach(exp => {
-
                const dateDebut = dayjs(exp.date_start);
                const dateEnd = exp.date_end ? dayjs(exp.date_end) : dayjs();
                const years = dateEnd.diff(dateDebut, 'year');
@@ -45,6 +44,6 @@ export async function GET(req: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
-
-     return NextResponse.json({ message: "POST request recei2ved" }, { status: 201 });
-}
+    
+     return NextResponse.json({ message: "POST request recieved" }, { status: 201 });
+} 

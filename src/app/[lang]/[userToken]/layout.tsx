@@ -6,7 +6,7 @@ export default function SiteLayout({
 }>) {
   return (
 
-    <div className="max-w-screen-xl mx-auto m-4 flex flex-col min-h-full">
+    <div className="max-w-screen-xl mx-auto m-4 flex flex-col ">
       <Navbar />
       <main className="flex-1 md:mx-0 mx-4">
         {children}

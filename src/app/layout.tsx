@@ -22,7 +22,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={`${poppins.variable} h-full`} suppressHydrationWarning>
-      <body >
+      <body>
         <ThemeProvider attribute="class" enableSystem={true}>
           {children}
         </ThemeProvider>

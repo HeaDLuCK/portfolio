@@ -1,31 +1,13 @@
 import { Resend } from 'resend';
-
-const sendMail = (name: string, mail: string, subject: string, comment: string) => {
-    console.log('Sending email with Resend...');
-    const resend = new Resend(process.env.RESEND_API_KEY || '');
-    console.log(process.env.RESEND_API_KEY || '');
-    if (!mail || !subject || !comment) {
-        console.log('Missing required parameters: from, subject, or html');
-    }
-    resend.emails.send({
-        from: 'contact@missouzakaria.com',
-        to: 'xlooon1miss@gmail.com',
-        subject: `[Portfolio] ${subject}`,
-        replyTo: mail,
-        html: `
-            <h2>New Contact Form Submission</h2>
-            <p><strong>Name:</strong> ${name}</p>
-            <p><strong>Email:</strong> ${mail}</p>
-            <p><strong>Subject:</strong> ${subject}</p>
-            <p><strong>Message:</strong><br/>${comment}</p>
-            `,
-    }).then((response) => {
-        console.log('Email sent successfully:', response);
-    }
-    ).catch((error) => {
-        console.error('Error sending email:', error);
-    }
-    );
-
-};
-export default sendMail;
+export default async function sendMail(name: string, mail: string, subject: string, comment: string) {
+  const key = process.env.RESEND_API_KEY;
+  const from = process.env.CONTACT_FROM_EMAIL;
+  if (!key || !from) throw new Error('MAIL_NOT_CONFIGURED');
+  const { data, error } = await new Resend(key).emails.send({
+    from, to: ['missouzakaria03@gmail.com'], replyTo: mail,
+    subject: `[Portfolio] ${subject}`,
+    text: `New portfolio enquiry\n\nName: ${name}\nEmail: ${mail}\nSubject: ${subject}\n\n${comment}`,
+  });
+  if (error || !data?.id) throw new Error('MAIL_DELIVERY_FAILED');
+  return data.id;
+}

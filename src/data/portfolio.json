@@ -1,0 +1,634 @@
+{
+  "name": "Zakaria Missou",
+  "websites": [
+    {
+      "platform": "Github",
+      "link": "https://github.com/HeaDLuCK"
+    },
+    {
+      "platform": "Linkedin",
+      "link": "https://linkedin.com/in/zakaria-missou"
+    },
+    {
+      "platform": "Instagram",
+      "link": "https://instagram.com/zakaria_miss"
+    }
+  ],
+  "sections": [
+    {
+      "section": "hero",
+      "translations": [
+        {
+          "lang": "en",
+          "heading": "Hey, I'm",
+          "typewriter": [
+            " Zakaria Missou",
+            " FullStack Developer",
+            " Web Enthusiast"
+          ],
+          "description": " I’m a passionate FullStack Web Developer from Morocco with expertise in modern web technologies.\n            I specialize in building responsive, user-friendly web applications that bring ideas to life and create meaningful digital experiences.\n            Constantly eager to learn and innovate, I enjoy exploring new tools and pushing the boundaries of web development."
+        },
+        {
+          "lang": "fr",
+          "heading": "Salut, je suis",
+          "typewriter": [
+            " Zakaria Missou",
+            " Développeur FullStack",
+            " Passionné du Web"
+          ],
+          "description": "Je suis un développeur web FullStack passionné du Maroc spécialisé dans les technologies modernes."
+        }
+      ],
+      "icon": {
+        "type": "image",
+        "value": "/icons/hero-icon.svg"
+      }
+    },
+    {
+      "section": "about",
+      "translations": [
+        {
+          "lang": "en",
+          "heading": "About Me",
+          "typewriter": [],
+          "description": "I started coding during the COVID era,\n            writing my first Python program and quickly falling in love with development.\n            Since then, I’ve been on a journey exploring different languages and frameworks,\n            always driven by curiosity and a passion for learning. When I’m not coding,\n            you’ll find me gaming or diving into new technologies."
+        }
+      ],
+      "icon": {
+        "type": "icon",
+        "value": "about-icon"
+      }
+    },
+    {
+      "section": "experience",
+      "translations": [
+        {
+          "lang": "en",
+          "heading": "Years of Experience",
+          "typewriter": [],
+          "description": "2"
+        }
+      ],
+      "icon": {
+        "type": "icon",
+        "value": "experience-icon"
+      }
+    },
+    {
+      "section": "projects",
+      "translations": [
+        {
+          "lang": "en",
+          "heading": "Projects Completed",
+          "typewriter": [],
+          "description": "4"
+        }
+      ],
+      "icon": {
+        "type": "icon",
+        "value": "projects-icon"
+      }
+    },
+    {
+      "section": "skills",
+      "translations": [
+        {
+          "lang": "en",
+          "heading": "Technical Skills",
+          "typewriter": [],
+          "description": "20"
+        }
+      ],
+      "icon": {
+        "type": "icon",
+        "value": "skills-icon"
+      }
+    },
+    {
+      "section": "footer",
+      "translations": [
+        {
+          "lang": "en",
+          "heading": "Love to hear from you",
+          "typewriter": [],
+          "description": "Always open to ideas, feedback, or a good conversation—because great things happen when we connect and share."
+        }
+      ],
+      "icon": {
+        "type": "icon",
+        "value": "footer-icon"
+      }
+    }
+  ],
+  "skills": [
+    {
+      "translations": [
+        {
+          "lang": "en",
+          "title": "Java"
+        },
+        {
+          "lang": "fr",
+          "title": "Java"
+        },
+        {
+          "lang": "de",
+          "title": "Java"
+        }
+      ],
+      "icon": "FaJava"
+    },
+    {
+      "translations": [
+        {
+          "lang": "en",
+          "title": "Python"
+        },
+        {
+          "lang": "fr",
+          "title": "Python"
+        },
+        {
+          "lang": "de",
+          "title": "Python"
+        }
+      ],
+      "icon": "FaPython"
+    },
+    {
+      "translations": [
+        {
+          "lang": "en",
+          "title": "PHP"
+        },
+        {
+          "lang": "fr",
+          "title": "PHP"
+        },
+        {
+          "lang": "de",
+          "title": "PHP"
+        }
+      ],
+      "icon": "FaPhp"
+    },
+    {
+      "translations": [
+        {
+          "lang": "en",
+          "title": "C#"
+        },
+        {
+          "lang": "fr",
+          "title": "C#"
+        },
+        {
+          "lang": "de",
+          "title": "C#"
+        }
+      ],
+      "icon": "TbBrandCSharp"
+    },
+    {
+      "translations": [
+        {
+          "lang": "en",
+          "title": "HTML5"
+        },
+        {
+          "lang": "fr",
+          "title": "HTML5"
+        },
+        {
+          "lang": "de",
+          "title": "HTML5"
+        }
+      ],
+      "icon": "FaHtml5"
+    },
+    {
+      "translations": [
+        {
+          "lang": "en",
+          "title": "CSS3"
+        },
+        {
+          "lang": "fr",
+          "title": "CSS3"
+        },
+        {
+          "lang": "de",
+          "title": "CSS3"
+        }
+      ],
+      "icon": "FaCss3Alt"
+    },
+    {
+      "translations": [
+        {
+          "lang": "en",
+          "title": "JavaScript"
+        },
+        {
+          "lang": "fr",
+          "title": "JavaScript"
+        },
+        {
+          "lang": "de",
+          "title": "JavaScript"
+        }
+      ],
+      "icon": "FaJs"
+    },
+    {
+      "translations": [
+        {
+          "lang": "en",
+          "title": "Laravel"
+        },
+        {
+          "lang": "fr",
+          "title": "Laravel"
+        },
+        {
+          "lang": "de",
+          "title": "Laravel"
+        }
+      ],
+      "icon": "FaLaravel"
+    },
+    {
+      "translations": [
+        {
+          "lang": "en",
+          "title": "React"
+        },
+        {
+          "lang": "fr",
+          "title": "React"
+        },
+        {
+          "lang": "de",
+          "title": "React"
+        }
+      ],
+      "icon": "FaReact"
+    },
+    {
+      "translations": [
+        {
+          "lang": "en",
+          "title": "Vue.js"
+        },
+        {
+          "lang": "fr",
+          "title": "Vue.js"
+        },
+        {
+          "lang": "de",
+          "title": "Vue.js"
+        }
+      ],
+      "icon": "FaVuejs"
+    },
+    {
+      "translations": [
+        {
+          "lang": "en",
+          "title": "Node.js"
+        },
+        {
+          "lang": "fr",
+          "title": "Node.js"
+        },
+        {
+          "lang": "de",
+          "title": "Node.js"
+        }
+      ],
+      "icon": "FaNode"
+    },
+    {
+      "translations": [
+        {
+          "lang": "en",
+          "title": "Docker"
+        },
+        {
+          "lang": "fr",
+          "title": "Docker"
+        },
+        {
+          "lang": "de",
+          "title": "Docker"
+        }
+      ],
+      "icon": "FaDocker"
+    },
+    {
+      "translations": [
+        {
+          "lang": "en",
+          "title": "Git"
+        },
+        {
+          "lang": "fr",
+          "title": "Git"
+        },
+        {
+          "lang": "de",
+          "title": "Git"
+        }
+      ],
+      "icon": "FaGitAlt"
+    },
+    {
+      "translations": [
+        {
+          "lang": "en",
+          "title": "Tailwind CSS"
+        },
+        {
+          "lang": "fr",
+          "title": "Tailwind CSS"
+        },
+        {
+          "lang": "de",
+          "title": "Tailwind CSS"
+        }
+      ],
+      "icon": "BiLogoTailwindCss"
+    },
+    {
+      "translations": [
+        {
+          "lang": "en",
+          "title": "MySQL"
+        },
+        {
+          "lang": "fr",
+          "title": "MySQL"
+        },
+        {
+          "lang": "de",
+          "title": "MySQL"
+        }
+      ],
+      "icon": "SiMysql"
+    },
+    {
+      "translations": [
+        {
+          "lang": "en",
+          "title": "NoSQL / MongoDB"
+        },
+        {
+          "lang": "fr",
+          "title": "NoSQL / MongoDB"
+        },
+        {
+          "lang": "de",
+          "title": "NoSQL / MongoDB"
+        }
+      ],
+      "icon": "DiMongodb"
+    },
+    {
+      "translations": [
+        {
+          "lang": "en",
+          "title": "Arduino"
+        },
+        {
+          "lang": "fr",
+          "title": "Arduino"
+        },
+        {
+          "lang": "de",
+          "title": "Arduino"
+        }
+      ],
+      "icon": "SiArduino"
+    },
+    {
+      "translations": [
+        {
+          "lang": "en",
+          "title": "Spring Boot"
+        },
+        {
+          "lang": "fr",
+          "title": "Spring Boot"
+        },
+        {
+          "lang": "de",
+          "title": "Spring Boot"
+        }
+      ],
+      "icon": "SiSpring"
+    },
+    {
+      "translations": [
+        {
+          "lang": "en",
+          "title": "jQuery"
+        },
+        {
+          "lang": "fr",
+          "title": "jQuery"
+        },
+        {
+          "lang": "de",
+          "title": "jQuery"
+        }
+      ],
+      "icon": "DiJqueryLogo"
+    },
+    {
+      "translations": [
+        {
+          "lang": "en",
+          "title": "Linux CLI"
+        },
+        {
+          "lang": "fr",
+          "title": "Linux CLI"
+        },
+        {
+          "lang": "de",
+          "title": "Linux CLI"
+        }
+      ],
+      "icon": "BsFillTerminalFill"
+    }
+  ],
+  "experience": [
+    {
+      "company_name": "Juniv tech",
+      "translations": [
+        {
+          "lang": "en",
+          "position": "Full-Stack Developer",
+          "description": "I am a passionate software developer with hands-on experience contributing to a real-world SaaS platform. I worked on improving and extending an existing system using Java and web technologies, focusing on code refactoring, performance enhancements, and new feature development. This experience helped me grow as a developer and strengthened my understanding of clean code and collaborative development."
+        },
+        {
+          "lang": "fr",
+          "position": "Développeur Full-Stack",
+          "description": "Je suis un développeur logiciel passionné avec une expérience pratique sur une plateforme SaaS réelle. J'ai travaillé sur l'amélioration et l'extension d’un système existant en utilisant Java et les technologies web, en me concentrant sur le refactoring du code, les optimisations de performance et le développement de nouvelles fonctionnalités. Cette expérience m'a permis de progresser en tant que développeur et de renforcer ma compréhension du code propre et du travail collaboratif."
+        },
+        {
+          "lang": "de",
+          "position": "Full-Stack-Entwickler",
+          "description": "Ich bin ein leidenschaftlicher Softwareentwickler mit praktischer Erfahrung an einer realen SaaS-Plattform. Ich habe an der Verbesserung und Erweiterung eines bestehenden Systems mit Java und Webtechnologien gearbeitet, mit Schwerpunkt auf Code-Refactoring, Leistungsoptimierung und Entwicklung neuer Funktionen. Diese Erfahrung hat mein Wachstum als Entwickler gefördert und mein Verständnis für sauberen Code und kollaborative Entwicklung gestärkt."
+        }
+      ],
+      "date_start": "2023-09-01T00:00:00.000Z",
+      "date_end": null
+    }
+  ],
+  "education": [
+    {
+      "date_start": "2024-01-01T00:00:00.000Z",
+      "date_end": null,
+      "translations": [
+        {
+          "lang": "en",
+          "institution": "Udemy",
+          "field_of_study": "Game Development with Unity",
+          "description": "Currently learning Unity & C# for 2D/3D games."
+        },
+        {
+          "lang": "fr",
+          "institution": "Udemy",
+          "field_of_study": "Développement de jeux avec Unity",
+          "description": "Actuellement en train d’apprendre Unity et C# pour créer des jeux 2D/3D."
+        },
+        {
+          "lang": "de",
+          "institution": "Udemy",
+          "field_of_study": "Spieleentwicklung mit Unity",
+          "description": "Lerne derzeit Unity und C# für 2D/3D-Spiele."
+        }
+      ]
+    },
+    {
+      "date_start": "2023-01-01T00:00:00.000Z",
+      "date_end": "2023-12-31T00:00:00.000Z",
+      "translations": [
+        {
+          "lang": "en",
+          "institution": "The Odin Project",
+          "field_of_study": "Full Stack JavaScript Path",
+          "description": "Completed frontend and backend courses with real-world projects."
+        },
+        {
+          "lang": "fr",
+          "institution": "The Odin Project",
+          "field_of_study": "Parcours JavaScript Full Stack",
+          "description": "Cours front-end et back-end terminés avec des projets réels."
+        },
+        {
+          "lang": "de",
+          "institution": "The Odin Project",
+          "field_of_study": "Full Stack JavaScript Pfad",
+          "description": "Frontend- und Backend-Kurse mit realen Projekten abgeschlossen."
+        }
+      ]
+    },
+    {
+      "date_start": "2021-09-01T00:00:00.000Z",
+      "date_end": "2023-06-30T00:00:00.000Z",
+      "translations": [
+        {
+          "lang": "en",
+          "institution": "Web Development Diploma",
+          "field_of_study": "Full Stack Development",
+          "description": "Learning HTML, CSS, JS, PHP, MySQL, NoSQL, React, Laravel."
+        },
+        {
+          "lang": "fr",
+          "institution": "Diplôme en développement web",
+          "field_of_study": "Développement Full Stack",
+          "description": "Apprentissage de HTML, CSS, JS, PHP, MySQL, NoSQL, React, Laravel."
+        },
+        {
+          "lang": "de",
+          "institution": "Webentwicklungs-Diplom",
+          "field_of_study": "Full Stack Entwicklung",
+          "description": "Lernen von HTML, CSS, JS, PHP, MySQL, NoSQL, React, Laravel."
+        }
+      ]
+    },
+    {
+      "date_start": "2018-09-01T00:00:00.000Z",
+      "date_end": "2021-06-30T00:00:00.000Z",
+      "translations": [
+        {
+          "lang": "en",
+          "institution": "High School",
+          "field_of_study": "",
+          "description": "Graduated in 2021."
+        },
+        {
+          "lang": "fr",
+          "institution": "Lycée",
+          "field_of_study": "",
+          "description": "Diplômé en 2021."
+        },
+        {
+          "lang": "de",
+          "institution": "Gymnasium",
+          "field_of_study": "",
+          "description": "Abschluss im Jahr 2021."
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "section": "feature",
+      "translations": [
+        {
+          "lang": "en",
+          "title": "Frontend Development",
+          "description": "Building responsive and interactive user interfaces using modern frameworks and best practices."
+        }
+      ],
+      "order": 1
+    },
+    {
+      "section": "feature",
+      "translations": [
+        {
+          "lang": "en",
+          "title": "Backend Development",
+          "description": "Developing robust server-side applications, APIs, and efficient database solutions."
+        }
+      ],
+      "order": 2
+    },
+    {
+      "section": "feature",
+      "translations": [
+        {
+          "lang": "en",
+          "title": "Responsive Design",
+          "description": "Ensuring seamless functionality and aesthetics across all devices and screen sizes."
+        }
+      ],
+      "order": 3
+    },
+    {
+      "section": "feature",
+      "translations": [
+        {
+          "lang": "en",
+          "title": "Performance Optimization",
+          "description": "Optimizing web applications for speed, scalability, and an enhanced user experience."
+        }
+      ],
+      "order": 4
+    }
+  ],
+  "projects": []
+}

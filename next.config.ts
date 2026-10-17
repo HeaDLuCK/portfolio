@@ -1,8 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  output: 'standalone',
+  // Vercel manages the serverless output; no standalone server is needed.
 };
 
 export default nextConfig;

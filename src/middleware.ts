@@ -22,10 +22,6 @@ export function middleware(request: NextRequest) {
       sameSite: 'lax',
     });
 
-    if(pathname === '/') {
-      url.pathname = `/${lang}/${token}`;
-      return NextResponse.redirect(url);
-    }
     return res
   }
   

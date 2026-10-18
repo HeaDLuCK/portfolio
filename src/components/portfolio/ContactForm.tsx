@@ -38,8 +38,8 @@ export default function ContactForm({ direct = false, locale = 'en' }: { direct?
   }
   return <form onSubmit={submit} className="contact-form" aria-busy={status === 'sending'}>
     <div className="form-row">
-      <label>{t.name}<input name="name" autoComplete="name" placeholder="Alex Morgan" required maxLength={100} /></label>
-      <label>{t.email}<input name="email" type="email" autoComplete="email" placeholder="alex@company.com" required maxLength={254} /></label>
+      <label>{t.name}<input name="name" autoComplete="name" placeholder={t.name} required maxLength={100} /></label>
+      <label>{t.email}<input name="email" type="email" autoComplete="email" placeholder={t.email} required maxLength={254} /></label>
     </div>
     <label>{t.subject}<input name="subject" placeholder={t.subjectPlaceholder} required maxLength={150} /></label>
     <label>{t.message}<textarea name="comment" rows={5} placeholder={t.messagePlaceholder} required minLength={10} maxLength={5000} /></label>

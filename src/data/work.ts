@@ -2,6 +2,7 @@
 export const publicProjects = [
   {
     name: 'AI Camera Service',
+    kind: 'source',
     category: 'Computer vision / Public project',
     description: 'A Python service for camera processing, face recognition, and attendance events, with API endpoints and MongoDB storage.',
     technologies: ['Python', 'FastAPI', 'OpenCV', 'MongoDB'],
@@ -12,16 +13,18 @@ export const publicProjects = [
   },
   {
     name: 'ImageLover',
+    kind: 'source',
     category: 'Headless API / Public project',
     description: 'A headless API for images, designed to provide an image backend that can connect to different frontends.',
     technologies: ['Java', 'Headless API', 'Images'],
     url: 'https://github.com/HeaDLuCK/imagelover',
-    visual: 'vision',
+    visual: 'images',
     symbol: '{ img }',
     caption: 'IMAGES → API → YOUR FRONTEND',
   },
   {
     name: 'Val Bank',
+    kind: 'source',
     category: 'Personal finance / Project idea',
     description: 'A project idea for managing your money and keeping your personal finances organized in one place.',
     technologies: ['PHP', 'Personal finance'],

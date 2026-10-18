@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Poppins, Inter, IBM_Plex_Mono } from "next/font/google";
 import { ThemeProvider } from 'next-themes';
 import "./globals.css";
 
@@ -8,6 +8,8 @@ const poppins = Poppins({
   weight: ['400', '600', '700'],
   variable: '--font-poppins',
 })
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
+const mono = IBM_Plex_Mono({ subsets: ['latin'], weight: ['400', '500'], variable: '--font-ibm-plex-mono', display: 'swap' });
 export const metadata: Metadata = {
   title: "Zakaria Missou | FullStack Developer",
   keywords: ["Missou", "Zakaria", "Java", "front-end", "back-end", "Zakaria Missou", "FullStack Developer", "Web Development", "JavaScript", "React", "Node.js", "AI"],
@@ -21,7 +23,7 @@ export default function RootLayout({
 }>) {
 
   return (
-    <html lang="en" className={`${poppins.variable} h-full`} suppressHydrationWarning>
+    <html lang="en" className={`${poppins.variable} ${inter.variable} ${mono.variable} h-full`} suppressHydrationWarning>
       <body>
         <ThemeProvider attribute="class" enableSystem={true}>
           {children}

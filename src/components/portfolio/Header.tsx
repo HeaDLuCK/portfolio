@@ -17,7 +17,7 @@ export default function Header({ locale = 'en' }: { locale?: Locale }) {
     router.push(localPath(value, path));
   }
   return <header className="site-header"><div className="shell header-inner">
-    <Link href={localPath(locale)} className="wordmark" aria-label={`Zakaria Missou — ${t.nav[0]}`}>zm<span>.</span></Link>
+    <Link href={localPath(locale)} className="wordmark" aria-label={`Zakaria Missou — ${t.nav[0]}`}>ZM<span>.</span></Link>
     <div className="header-controls"><label className="language-picker"><span className="sr-only">{t.language}</span><select value={locale} onChange={event => changeLanguage(event.target.value as Locale)} aria-label={t.language}><option value="en" lang="en">English</option><option value="fr" lang="fr">Français</option><option value="de" lang="de">Deutsch</option></select></label>
     <button className="menu-toggle" aria-label={open ? t.closeMenu : t.openMenu} aria-expanded={open} aria-controls="main-nav" onClick={() => setOpen(!open)}>{open ? <LuX /> : <LuMenu />}</button></div>
     <nav id="main-nav" aria-label={t.navigation} className={open ? 'main-nav open' : 'main-nav'}>

@@ -41,3 +41,7 @@ The exporter defaults to `mongodb://127.0.0.1:27017/portfolio_db`, or uses `MONG
 
 
 
+
+## Design reference
+
+`DESIGN.md` contains the StudioBlank reference. The public portfolio adapts it to a midnight navy and charcoal palette, with off-white text and a restrained cool-blue accent. Inter and IBM Plex Mono provide weight and metadata contrast. Surfaces are flat and square, with no shadows, gradients, decorative shapes, or text over the portrait. Generous spacing, thin dividers, simple project artwork, and rectangular buttons carry the design across English, French, and German pages.

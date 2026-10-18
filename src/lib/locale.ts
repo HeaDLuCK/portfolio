@@ -78,4 +78,3 @@ const de: Dictionary = {
 };
 
 export const dictionaries: Record<Locale, Dictionary> = { en, fr, de };
-

@@ -1,0 +1,55 @@
+import type { Locale } from '@/lib/locale';
+
+const en = {
+  alone: 'Play alone', together: 'Play with friends', mode: 'Recording mode', solo: 'SOLO', coop: 'CO-OP / UP TO 4',
+  create: 'Create room', join: 'Join room', linkLabel: 'Room invite link or code', linkPlaceholder: 'Paste an invite link or room code',
+  connecting: 'Connecting to room…', lobby: 'The room is waiting.', joined: 'CONNECTED EXPLORERS', host: 'HOST', you: 'YOU',
+  invite: 'Invite link', copy: 'Copy invite', copied: 'Invite copied', copyFailed: 'Select and copy the invite link below.',
+  local: 'Local link—other devices need a deployed site and room service.',
+  unavailable: 'Online co-op needs the room service connection. Solo is available.', checking: 'Checking room service…',
+  start: 'Enter together', preparing: 'Preparing the rooms…', wait: 'Waiting for the host to begin.', leave: 'Leave room', cancel: 'Cancel connection',
+  empty: 'Create a private room, or join through a friend’s invite. Up to four anonymous explorers share the same rooms.',
+  room: 'PRIVATE ROOM', service: 'Anonymous session · Shared fuses · No account', alive: 'Inside', lost: 'Lost', escaped: 'Escaped', paused: 'Paused',
+  hostPaused: 'The host paused. The team is waiting.', guestPause: 'Your view is paused. The room continues, and the presence can still reach you.',
+  hostPause: 'The team is waiting while you pause.', hostLeft: 'Host left. Start a new room.', disconnected: 'The room connection ended.',
+  restart: 'Restart for everyone', waitRestart: 'Waiting for the host to restart the recording.', roster: 'Explorers in this room',
+  inspect: 'Room & invite', close: 'Close room panel', return: 'Return to solo', reconnect: 'Try the room again',
+  connectionError: 'Unable to connect to the room.', inputNeeded: 'Paste an invite link or a room code first.',
+  ongoing: 'The recording is still running. The remaining explorers can continue.', allLost: 'No one is still inside. The host can start a new recording.',
+};
+type CoopCopy = typeof en;
+const fr: CoopCopy = {
+  alone: 'Jouer seul', together: 'Jouer entre amis', mode: 'Mode d’enregistrement', solo: 'SOLO', coop: 'COOP / JUSQU’À 4',
+  create: 'Créer une salle', join: 'Rejoindre', linkLabel: 'Lien d’invitation ou code de salle', linkPlaceholder: 'Coller un lien ou un code de salle',
+  connecting: 'Connexion à la salle…', lobby: 'La salle vous attend.', joined: 'EXPLORATEURS CONNECTÉS', host: 'HÔTE', you: 'VOUS',
+  invite: 'Lien d’invitation', copy: 'Copier le lien', copied: 'Lien copié', copyFailed: 'Sélectionnez et copiez le lien ci-dessous.',
+  local: 'Lien local : les autres appareils ont besoin d’un site déployé et du service de salles.',
+  unavailable: 'La coop en ligne nécessite la connexion au service de salles. Le solo est disponible.', checking: 'Vérification du service…',
+  start: 'Entrer ensemble', preparing: 'Préparation des pièces…', wait: 'En attente du lancement par l’hôte.', leave: 'Quitter la salle', cancel: 'Annuler la connexion',
+  empty: 'Créez une salle privée ou utilisez le lien d’un ami. Jusqu’à quatre explorateurs anonymes partagent les mêmes pièces.',
+  room: 'SALLE PRIVÉE', service: 'Session anonyme · Fusibles partagés · Sans compte', alive: 'À l’intérieur', lost: 'Perdu', escaped: 'Sorti', paused: 'En pause',
+  hostPaused: 'L’hôte est en pause. Le groupe attend.', guestPause: 'Votre vue est en pause. La salle continue et la présence peut vous atteindre.',
+  hostPause: 'Le groupe attend pendant votre pause.', hostLeft: 'L’hôte est parti. Créez une nouvelle salle.', disconnected: 'La connexion à la salle est terminée.',
+  restart: 'Recommencer pour tous', waitRestart: 'En attente d’un nouvel enregistrement par l’hôte.', roster: 'Explorateurs dans cette salle',
+  inspect: 'Salle et invitation', close: 'Fermer le panneau', return: 'Retour au solo', reconnect: 'Réessayer la connexion',
+  connectionError: 'Impossible de se connecter à la salle.', inputNeeded: 'Collez d’abord un lien d’invitation ou un code.',
+  ongoing: 'L’enregistrement continue. Les explorateurs restants peuvent poursuivre.', allLost: 'Plus personne à l’intérieur. L’hôte peut recommencer.',
+};
+const de: CoopCopy = {
+  alone: 'Allein spielen', together: 'Mit Freunden spielen', mode: 'Aufnahmemodus', solo: 'SOLO', coop: 'KOOP / BIS ZU 4',
+  create: 'Raum erstellen', join: 'Raum beitreten', linkLabel: 'Einladungslink oder Raumcode', linkPlaceholder: 'Einladungslink oder Raumcode einfügen',
+  connecting: 'Verbindung zum Raum…', lobby: 'Der Raum wartet.', joined: 'VERBUNDENE ERKUNDER', host: 'HOST', you: 'DU',
+  invite: 'Einladungslink', copy: 'Einladung kopieren', copied: 'Einladung kopiert', copyFailed: 'Wähle den Link unten aus und kopiere ihn.',
+  local: 'Lokaler Link: Andere Geräte benötigen eine veröffentlichte Website und den Raumdienst.',
+  unavailable: 'Online-Koop benötigt den Raumdienst. Solo ist verfügbar.', checking: 'Raumdienst wird geprüft…',
+  start: 'Gemeinsam eintreten', preparing: 'Räume werden vorbereitet…', wait: 'Warten, bis der Host beginnt.', leave: 'Raum verlassen', cancel: 'Verbindung abbrechen',
+  empty: 'Erstelle einen privaten Raum oder nutze die Einladung eines Freundes. Bis zu vier anonyme Erkunder teilen dieselben Räume.',
+  room: 'PRIVATER RAUM', service: 'Anonyme Sitzung · Gemeinsame Sicherungen · Ohne Konto', alive: 'Drinnen', lost: 'Verloren', escaped: 'Entkommen', paused: 'Pausiert',
+  hostPaused: 'Der Host hat pausiert. Das Team wartet.', guestPause: 'Deine Ansicht ist pausiert. Der Raum läuft weiter und die Präsenz kann dich erreichen.',
+  hostPause: 'Das Team wartet während deiner Pause.', hostLeft: 'Der Host ist gegangen. Erstelle einen neuen Raum.', disconnected: 'Die Raumverbindung wurde beendet.',
+  restart: 'Für alle neu starten', waitRestart: 'Warten, bis der Host die Aufnahme neu startet.', roster: 'Erkunder in diesem Raum',
+  inspect: 'Raum und Einladung', close: 'Raumpanel schließen', return: 'Zurück zu Solo', reconnect: 'Raum erneut versuchen',
+  connectionError: 'Verbindung zum Raum fehlgeschlagen.', inputNeeded: 'Füge zuerst einen Einladungslink oder Raumcode ein.',
+  ongoing: 'Die Aufnahme läuft weiter. Die übrigen Erkunder können fortfahren.', allLost: 'Niemand ist noch drinnen. Der Host kann neu starten.',
+};
+export const coopCopy: Record<Locale, CoopCopy> = { en, fr, de };

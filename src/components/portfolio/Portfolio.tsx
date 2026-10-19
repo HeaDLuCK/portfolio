@@ -8,6 +8,7 @@ import { dictionaries, Locale, localPath } from '@/lib/locale';
 import Header from './Header';
 import ContactForm from './ContactForm';
 import Work from './Work';
+import GamesSection from './GamesSection';
 
 const socialIcons = [FaGithub, FaLinkedin, FaInstagram];
 const translated = <T extends { lang: string }>(items: T[], locale: Locale) => items.find(item => item.lang === locale) || items.find(item => item.lang === 'en') || items[0];
@@ -53,6 +54,7 @@ export default function Portfolio({ page = 'home', locale = 'en' }: { page?: 'ho
       <figure className="portrait-composition"><span className="portrait-top-label">{t.behindCode}</span><div className="portrait-frame"><Image src={portrait} alt={t.portraitAlt} priority sizes="(max-width: 720px) 90vw, 45vw" /></div><figcaption className="portrait-caption"><span>{t.hello}</span><span>{t.personal}</span></figcaption><span className="portrait-coordinate">{t.location}</span></figure><a href="#about" className="scroll-cue"><LuArrowDown /> {t.scroll}</a></section><div className="tech-strip"><div className="shell"><span>{t.stack}</span><b>React</b><b>Java</b><b>Spring Boot</b><b>Next.js</b><b>Laravel</b></div></div></>}
     {(page === 'home' || page === 'about') && <About locale={locale} />}
     {(page === 'home' || page === 'projects') && <Work locale={locale} />}
+    {page === 'home' && <GamesSection locale={locale} />}
     {(page === 'home' || page === 'about') && <Journey locale={locale} />}
     {(page === 'home' || page === 'contact') && <Contact locale={locale} />}
     {(page === 'about' || page === 'projects') && <div className="shell closing-cta"><p>{t.closing}</p><Link href={localPath(locale, '/contact')}>{t.closingLink} <LuArrowUpRight /></Link></div>}

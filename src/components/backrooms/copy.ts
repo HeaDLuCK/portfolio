@@ -1,0 +1,58 @@
+import type { Locale } from '@/lib/locale';
+
+const en = {
+  title: 'The Backrooms / The Hollow', description: 'A first-person found-footage horror experience. Find three fuses, restore the exit, and survive the presence moving through the empty rooms.',
+  label: 'HORROR / 002', type: 'First-person survival horror', subtitle: 'The lights are on. You are not alone.', play: 'Enter the Backrooms', browser: 'Play in your browser',
+  gamesIntro: 'Two worlds, built for your browser. Escape the city in Last Exit, or step inside a recovered horror recording. Choose your detour.',
+  intro: 'An unmarked door. A missing survey team. One recovered recording. Enter a place that should not exist.', back: 'Back to portfolio',
+  loading: 'Recovering recording…', enter: 'Begin recording', note: 'Intense horror, sudden sounds, pursuit. Headphones recommended.', reduced: 'Reduced effects', reducedHint: 'Less flicker and camera movement',
+  objective: 'Restore the exit. Stay quiet.', mission: 'Find three fuses scattered through the rooms. Return to the red exit door and restore power. The Hollow hears you run. Walls break her line of sight. Keep moving, listen carefully, and save your breath.',
+  warning: 'An adult investigator enters an abandoned facility. A fictional supernatural presence pursues anyone inside.',
+  brief: 'THE RECOVERED TAPE', controls: 'Controls', move: 'Move', look: 'Look around', sprint: 'Run / hold', interact: 'Pick up / use door', flashlight: 'Flashlight', pause: 'Pause', moveHint: 'W A S D / ARROWS', lookHint: 'MOUSE / DRAG', sprintHint: 'SHIFT', interactHint: 'E', flashHint: 'F', pauseHint: 'ESC / P',
+  live: 'RECORDING', ready: 'TAPE READY', quality: 'Quality', auto: 'Auto', high: 'High', low: 'Low', sound: 'Sound', mute: 'Mute sound', unmute: 'Enable sound', touch: 'Touch controls', fullscreen: 'Enter fullscreen', exitFullscreen: 'Exit fullscreen',
+  fuses: 'FUSES', battery: 'LIGHT', stamina: 'STAMINA', power: 'FIND THE FUSES · RESTORE THE EXIT', capture: 'Click the view to look around · or drag to look',
+  paused: 'Recording paused.', pausedCopy: 'Take a breath. The rooms will wait.', resume: 'Continue recording', restart: 'Start a new recording',
+  caught: 'Recording lost.', caughtCopy: 'The recording ends here. No further movement was recovered.', escaped: 'Outside. For now.', escapedCopy: 'The exit opened. The recording survived. Something can still be heard on the other side.',
+  outcome: 'RECORDING RECOVERED', lost: 'TRANSMISSION INTERRUPTED', duration: 'TIME INSIDE', skip: 'Skip opening', introCaption: 'ARCHIVE / 11:43 PM · ADULT SURVEYOR · LAST KNOWN FOOTAGE',
+  error: 'The recording could not load.', errorCopy: 'Try Low quality and reopen the recording. The game needs a browser with WebGL enabled.', retry: 'Try again', detail: 'Technical details',
+  lookPad: 'Drag to look', run: 'RUN', use: 'USE', lamp: 'LIGHT', desktop: 'Mouse + keyboard / touch', length: 'A short horror experience', credit: 'An original browser experiment by Zakaria Missou. Fictional horror. No downloads or account required.',
+  related: 'Also in the arcade', lastExit: 'Last Exit — escape the city', other: 'The Backrooms / The Hollow — enter the recording',
+};
+type Copy = typeof en;
+const fr: Copy = {
+  ...en, description: 'Une expérience d’horreur en vue subjective. Trouvez trois fusibles, rétablissez la sortie et survivez à la présence qui parcourt les pièces vides.',
+  type: 'Horreur et survie en vue subjective', subtitle: 'Les lumières sont allumées. Vous n’êtes pas seul.', play: 'Entrer dans les Backrooms', browser: 'Jouer dans le navigateur',
+  gamesIntro: 'Deux univers, dans votre navigateur. Fuyez la ville dans Last Exit ou entrez dans un enregistrement d’horreur retrouvé. Choisissez votre détour.',
+  intro: 'Une porte anonyme. Une équipe disparue. Un enregistrement retrouvé. Entrez dans un lieu qui ne devrait pas exister.', back: 'Retour au portfolio',
+  loading: 'Récupération de la bande…', enter: 'Commencer l’enregistrement', note: 'Horreur intense, sons soudains et poursuite. Casque recommandé.', reduced: 'Effets réduits', reducedHint: 'Moins de scintillements et de mouvements de caméra',
+  objective: 'Rétablissez la sortie. Faites silence.', mission: 'Trouvez trois fusibles dans les pièces. Revenez à la porte de sortie rouge et rétablissez le courant. The Hollow vous entend courir. Les murs coupent sa ligne de vue. Avancez, écoutez et gardez votre souffle.',
+  warning: 'Un enquêteur adulte entre dans un bâtiment abandonné. Une présence surnaturelle fictive poursuit toute personne à l’intérieur.',
+  brief: 'LA BANDE RETROUVÉE', controls: 'Commandes', move: 'Se déplacer', look: 'Regarder', sprint: 'Courir / maintenir', interact: 'Ramasser / ouvrir', flashlight: 'Lampe', pause: 'Pause', lookHint: 'SOURIS / GLISSER',
+  live: 'ENREGISTREMENT', ready: 'BANDE PRÊTE', quality: 'Qualité', auto: 'Auto', high: 'Haute', low: 'Basse', sound: 'Son', mute: 'Couper le son', unmute: 'Activer le son', touch: 'Commandes tactiles', fullscreen: 'Plein écran', exitFullscreen: 'Quitter le plein écran',
+  fuses: 'FUSIBLES', battery: 'LAMPE', stamina: 'SOUFFLE', power: 'TROUVER LES FUSIBLES · RÉTABLIR LA SORTIE', capture: 'Cliquez sur la vue ou faites glisser pour regarder',
+  paused: 'Enregistrement en pause.', pausedCopy: 'Respirez. Les pièces attendront.', resume: 'Continuer l’enregistrement', restart: 'Nouvel enregistrement',
+  caught: 'Signal perdu.', caughtCopy: 'L’enregistrement s’arrête ici. Aucun autre mouvement n’a été retrouvé.', escaped: 'Dehors. Pour l’instant.', escapedCopy: 'La sortie s’est ouverte. La bande est intacte. Quelque chose se fait encore entendre de l’autre côté.',
+  outcome: 'ENREGISTREMENT RETROUVÉ', lost: 'TRANSMISSION INTERROMPUE', duration: 'TEMPS À L’INTÉRIEUR', skip: 'Passer l’introduction', introCaption: 'ARCHIVES / 23 H 43 · ENQUÊTEUR ADULTE · DERNIÈRES IMAGES',
+  error: 'La bande ne charge pas.', errorCopy: 'Essayez la qualité Basse et relancez. Un navigateur avec WebGL activé est nécessaire.', retry: 'Réessayer', detail: 'Détails techniques',
+  lookPad: 'Glisser pour regarder', run: 'COURIR', use: 'UTILISER', lamp: 'LAMPE', desktop: 'Souris + clavier / tactile', length: 'Une courte expérience d’horreur', credit: 'Une expérience originale de Zakaria Missou. Horreur fictive. Sans téléchargement ni compte.',
+  related: 'Également dans l’arcade', lastExit: 'Last Exit — fuir la ville', other: 'The Backrooms / The Hollow — ouvrir la bande',
+};
+const de: Copy = {
+  ...en, description: 'Ein Horrorerlebnis aus der Ichperspektive. Finde drei Sicherungen, schalte den Ausgang frei und überlebe die Präsenz in den leeren Räumen.',
+  type: 'Survival-Horror aus der Ichperspektive', subtitle: 'Das Licht ist an. Du bist nicht allein.', play: 'Die Backrooms betreten', browser: 'Im Browser spielen',
+  gamesIntro: 'Zwei Welten für deinen Browser. Entkomme der Stadt in Last Exit oder betrete eine geborgene Horroraufnahme. Wähle deinen Umweg.',
+  intro: 'Eine unmarkierte Tür. Ein vermisstes Team. Eine geborgene Aufnahme. Betritt einen Ort, den es nicht geben dürfte.', back: 'Zurück zum Portfolio',
+  loading: 'Aufnahme wird geborgen…', enter: 'Aufnahme starten', note: 'Intensiver Horror, plötzliche Geräusche und Verfolgung. Kopfhörer empfohlen.', reduced: 'Reduzierte Effekte', reducedHint: 'Weniger Flackern und Kamerabewegung',
+  objective: 'Stelle den Ausgang wieder her. Sei leise.', mission: 'Finde drei Sicherungen in den Räumen. Kehre zur roten Ausgangstür zurück und schalte den Strom ein. The Hollow hört dich rennen. Wände unterbrechen ihre Sicht. Bleib in Bewegung, höre genau hin und teile deine Kraft ein.',
+  warning: 'Ein erwachsener Ermittler betritt ein verlassenes Gebäude. Eine fiktive übernatürliche Präsenz verfolgt jeden darin.',
+  brief: 'DIE GEBORGENE AUFNAHME', controls: 'Steuerung', move: 'Bewegen', look: 'Umsehen', sprint: 'Rennen / halten', interact: 'Aufheben / Tür benutzen', flashlight: 'Taschenlampe', pause: 'Pause', lookHint: 'MAUS / ZIEHEN',
+  live: 'AUFNAHME', ready: 'BAND BEREIT', quality: 'Qualität', auto: 'Auto', high: 'Hoch', low: 'Niedrig', sound: 'Ton', mute: 'Ton ausschalten', unmute: 'Ton einschalten', touch: 'Touch-Steuerung', fullscreen: 'Vollbild', exitFullscreen: 'Vollbild verlassen',
+  fuses: 'SICHERUNGEN', battery: 'LICHT', stamina: 'AUSDAUER', power: 'SICHERUNGEN FINDEN · AUSGANG AKTIVIEREN', capture: 'Klicke in die Ansicht oder ziehe zum Umsehen',
+  paused: 'Aufnahme pausiert.', pausedCopy: 'Atme durch. Die Räume werden warten.', resume: 'Aufnahme fortsetzen', restart: 'Neue Aufnahme starten',
+  caught: 'Signal verloren.', caughtCopy: 'Hier endet die Aufnahme. Keine weitere Bewegung wurde aufgezeichnet.', escaped: 'Draußen. Vorerst.', escapedCopy: 'Der Ausgang war offen. Die Aufnahme hat überlebt. Hinter der Tür ist noch etwas zu hören.',
+  outcome: 'AUFNAHME GEBORGEN', lost: 'ÜBERTRAGUNG UNTERBROCHEN', duration: 'ZEIT IM INNEREN', skip: 'Einleitung überspringen', introCaption: 'ARCHIV / 23:43 UHR · ERWACHSENER ERMITTLER · LETZTE AUFNAHME',
+  error: 'Die Aufnahme konnte nicht laden.', errorCopy: 'Versuche Niedrige Qualität und öffne die Aufnahme erneut. Ein Browser mit WebGL ist erforderlich.', retry: 'Erneut versuchen', detail: 'Technische Details',
+  lookPad: 'Zum Umsehen ziehen', run: 'RENNEN', use: 'BENUTZEN', lamp: 'LICHT', desktop: 'Maus + Tastatur / Touch', length: 'Ein kurzes Horrorerlebnis', credit: 'Ein originales Browserexperiment von Zakaria Missou. Fiktiver Horror. Kein Download oder Konto erforderlich.',
+  related: 'Auch in der Arcade', lastExit: 'Last Exit — entkomme der Stadt', other: 'The Backrooms / The Hollow — öffne die Aufnahme',
+};
+export const horrorCopy: Record<Locale, Copy> = { en, fr, de };

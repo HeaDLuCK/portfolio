@@ -4,6 +4,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { dictionaries, Locale, localPath } from '@/lib/locale';
 import { LuArrowUpRight, LuMenu, LuX } from 'react-icons/lu';
+import { gameCopy } from '@/components/game/copy';
 
 export default function Header({ locale = 'en' }: { locale?: Locale }) {
   const pathname = usePathname();
@@ -22,6 +23,7 @@ export default function Header({ locale = 'en' }: { locale?: Locale }) {
     <button className="menu-toggle" aria-label={open ? t.closeMenu : t.openMenu} aria-expanded={open} aria-controls="main-nav" onClick={() => setOpen(!open)}>{open ? <LuX /> : <LuMenu />}</button></div>
     <nav id="main-nav" aria-label={t.navigation} className={open ? 'main-nav open' : 'main-nav'}>
       {['/', '/about', '/projects'].map((href, index) => <Link key={href} href={localPath(locale, href)} onClick={() => setOpen(false)} aria-current={pathname === localPath(locale, href) ? 'page' : undefined}>{t.nav[index]}</Link>)}
+      <Link href={localPath(locale, '/games')} onClick={() => setOpen(false)} aria-current={pathname === localPath(locale, '/games') ? 'page' : undefined}>{gameCopy[locale].nav}</Link>
       <Link href={localPath(locale, '/contact')} onClick={() => setOpen(false)} className="nav-contact">{t.nav[3]} <LuArrowUpRight /></Link>
     </nav>
   </div></header>;

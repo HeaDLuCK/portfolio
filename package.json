@@ -6,7 +6,14 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test:game": "node scripts/test-last-exit.cjs && node scripts/test-last-exit-engine.cjs",
+    "test:backrooms": "node scripts/test-backrooms.cjs && node scripts/test-backrooms-engine.cjs",
+    "test:multiplayer": "node scripts/test-backrooms-multiplayer.cjs && node scripts/test-multiplayer-sockets.cjs",
+    "multiplayer:dev": "node scripts/multiplayer-local.cjs",
+    "multiplayer:check": "node scripts/multiplayer-cloudflare.cjs check",
+    "multiplayer:login": "node scripts/multiplayer-cloudflare.cjs login",
+    "multiplayer:deploy": "node scripts/multiplayer-cloudflare.cjs deploy"
   },
   "dependencies": {
     "axios": "^1.10.0",
@@ -33,6 +40,8 @@
     "@types/react-dom": "^19",
     "@types/three": "^0.176.0",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wrangler": "^4.151.1",
+    "ws": "^8.22.0"
   }
 }

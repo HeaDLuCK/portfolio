@@ -1,0 +1,19 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "hollow-private-rooms",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-10-18",
+  "workers_dev": true,
+  "observability": { "enabled": false },
+  "vars": {
+    // Optional comma-separated HTTPS portfolio origins. Empty allows links
+    // from any origin; the random 96-bit room key remains the private invite.
+    "ALLOW_ORIGINS": ""
+  },
+  "durable_objects": {
+    "bindings": [{ "name": "HOLLOW_ROOMS", "class_name": "HollowRoomObject" }]
+  },
+  // The Free plan supports SQLite-backed objects. This game never calls
+  // storage: room contents disappear when the host disconnects.
+  "exports": { "HollowRoomObject": { "type": "durable-object", "storage": "sqlite" } }
+}
